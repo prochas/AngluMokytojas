@@ -45,6 +45,7 @@ function Reviews() {
       moveRight();
     }, 5000); // Automatically scroll every 5 seconds
     return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   const moveRight = () => {

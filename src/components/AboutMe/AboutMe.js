@@ -5,7 +5,7 @@ import Hero from "../../../public/images/hero-vector.svg";
 function AboutMe() {
   return (
     <section className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse">
-      <div className="lg:w-[45%]">
+      <div className="lg:w-[50%]">
         <h1 className="font-bold text-gray-900 lg:text-5xl">
           Anglų kalbos mokytojas, kuris padės jums išmokti anglų kalbą!
         </h1>
@@ -27,7 +27,7 @@ function AboutMe() {
           molestie risus odio, eget posuere sem tempus vel.
         </h2>
       </div>
-      <div className="lg:w-[55%] w-full">
+      <div className="lg:w-[50%] w-full">
         <Image className="h-full w-full" src={Hero} alt="hero" />
       </div>
     </section>
