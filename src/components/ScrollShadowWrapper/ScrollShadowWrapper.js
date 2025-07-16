@@ -18,7 +18,7 @@ export default function ScrollShadowWrapper({ children, threshold = 10 }) {
 
   return (
     <header
-      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${
+      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-[#FAFAFA] p-5 transition-shadow duration-300 ${
         scrolled ? "shadow-md" : "shadow-none"
       }`}
     >

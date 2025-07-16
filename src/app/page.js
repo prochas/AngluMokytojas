@@ -7,7 +7,7 @@ import Services from "@/components/Services/Services";
 
 export default function Home() {
   return (
-    <div className="bg-white mt-20">
+    <div className="bg-[#FAFAFA] mt-20">
       <AboutMe />
       <Services />
       <Prices />

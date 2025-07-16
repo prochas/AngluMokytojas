@@ -10,7 +10,7 @@ function Footer() {
         alt="Logo"
         src={Logo}
       />
-      <div className="text-white lg:font-semibold lg:text-sm font-normal text-[10px] text-right lg:space-y-3">
+      <div className="text-[#fafafa] lg:font-semibold lg:text-sm font-normal text-[10px] text-right lg:space-y-3">
         <p>© 2025 Anglų kalbos pamokos</p>
         <p>
           Sukurta su{" "}

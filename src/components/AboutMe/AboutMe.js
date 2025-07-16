@@ -1,11 +1,42 @@
-import React from "react";
+"use client"; // Important for Next.js App Router to run animations on the client
+
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Hero from "../../../public/images/hero-vector.svg";
+import gsap from "gsap";
 
 function AboutMe() {
+  const sectionRef = useRef(null);
+  const textRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(textRef.current, {
+        x: -50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      gsap.from(imageRef.current, {
+        x: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.3,
+      });
+    }, sectionRef);
+
+    return () => ctx.revert(); // Cleanup animation context
+  }, []);
+
   return (
-    <section className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse">
-      <div className="lg:w-[50%]">
+    <section
+      ref={sectionRef}
+      className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse"
+    >
+      <div ref={textRef} className="lg:w-[50%]">
         <h1 className="font-bold text-gray-900 lg:text-5xl">
           Anglų kalbos mokytojas, kuris padės jums išmokti anglų kalbą!
         </h1>
@@ -27,7 +58,7 @@ function AboutMe() {
           molestie risus odio, eget posuere sem tempus vel.
         </h2>
       </div>
-      <div className="lg:w-[50%] w-full">
+      <div ref={imageRef} className="lg:w-[50%] w-full">
         <Image className="h-full w-full" src={Hero} alt="hero" />
       </div>
     </section>

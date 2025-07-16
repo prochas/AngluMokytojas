@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Contacts() {
   return (
-    <section className="bg-white w-full mb-8 pb-8 lg:mb-16 lg:pb-16">
+    <section className="bg-[#FAFAFA] w-full mb-8 pb-8 lg:mb-16 lg:pb-16">
       <h2 className="text-2xl lg:text-4xl text-center text-black font-bold">
         Kontaktai
       </h2>
@@ -27,7 +27,7 @@ function Contacts() {
               placeholder="Your Message"
               rows="4"
             ></textarea>
-            <button className="bg-black w-full transition-all duration-300 text-white px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold">
+            <button className="bg-black w-full transition-all duration-300 text-[#fafafa] px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold">
               Siųsti žinutę
             </button>
           </form>
