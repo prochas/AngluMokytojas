@@ -16,10 +16,6 @@ function Contacts() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-      console.log("EMAIL_USER:", process.env.EMAIL_USER);
-    console.log("EMAIL_PASS:", process.env.EMAIL_PASS);
-
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -38,7 +34,8 @@ function Contacts() {
       setSuccess(true);
       setForm({ name: "", email: "", phone: "", message: "" });
     } else {
-      alert("Nepavyko išsiųsti žinutės.");
+      console.error("Failed to send message");
+      setSuccess(false);
     }
 
     setLoading(false);

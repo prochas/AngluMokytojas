@@ -16,9 +16,9 @@ export async function POST(req) {
     await transporter.sendMail({
       from: `"Kontaktų forma" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
-      subject: "Nauja žinutė iš svetainės",
+      subject: "📧 Nauja žinutė iš Anglų kalbos kontaktinės formos",
       html: `
-        <h3>Kontaktinė forma</h3>
+        <h3>📋 Kontaktinė forma</h3>
         <p><strong>Vardas:</strong> ${name}</p>
         <p><strong>El. paštas:</strong> ${email}</p>
         <p><strong>Telefonas:</strong> ${phone}</p>
