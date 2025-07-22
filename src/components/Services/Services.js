@@ -5,6 +5,8 @@ import SecondServiceImg from "../../../public/images/second-photo-v2.png";
 import ThirdServiceImg from "../../../public/images/third-photo.png";
 import FourthServiceImg from "../../../public/images/fourth-photo-v2.png";
 
+import BgCover from "../../../public/images/bg-cover.png";
+
 import Image from "next/image";
 
 const Services = () => {
@@ -36,7 +38,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-black w-full my-8 py-8 lg:my-16 lg:py-16">
+    <section className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 relative">
       <h2 className="text-2xl lg:text-4xl text-center text-white font-bold">
         Paslaugos
       </h2>
