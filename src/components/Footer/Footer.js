@@ -12,23 +12,6 @@ function Footer() {
       />
       <div className="text-[#fafafa] lg:font-semibold lg:text-sm font-normal text-[10px] text-right lg:space-y-3">
         <p>© 2025 Anglų kalbos pamokos</p>
-        <p>
-          Sukurta su{" "}
-          <a
-            className="text-blue-500 hover:underline"
-            href="https://www.linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Jūsų Vardas
-          </a>
-        </p>
-        <p>
-          Visos teisės saugomos.{" "}
-          <a className="text-blue-500 hover:underline" href="/privacy-policy">
-            Privatumo politika
-          </a>
-        </p>
       </div>
     </footer>
   );

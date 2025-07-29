@@ -12,25 +12,25 @@ function Prices() {
 
   const data = [
     {
-      title: "4 pamokos",
+      title: "1 pamoka per savaitę",
       description: "Mėnesio planas",
-      price: "108 €",
+      price: "100 €",
       img: OpenBook,
-      subDescription: "Vienos 60 min. pamokos kaina tik 27 €",
+      subDescription: "Vienos 60 min. pamokos kaina tik 25 €",
     },
     {
-      title: "6 pamokos",
+      title: "2 pamokos per savaitę",
       description: "Mėnesio planas",
-      price: "162 €",
+      price: "190 €",
       img: Books,
-      subDescription: "Vienos 60 min. pamokos kaina tik 27 €",
+      subDescription: "Vienos 60 min. pamokos kaina tik 23.75 €",
     },
     {
-      title: "8 pamokos",
+      title: "3 pamokos per savaitę",
       description: "Mėnesio planas",
-      price: "204 €",
+      price: "275 €",
       img: BookStack,
-      subDescription: "Vienos 60 min. pamokos kaina tik 25.5 €",
+      subDescription: "Vienos 60 min. pamokos kaina tik 22.90 €",
     },
   ];
 
@@ -47,12 +47,17 @@ function Prices() {
               className="p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-1 relative"
               style={{
                 backgroundColor:
-                  index === 0 ? "#F3F4F6" : index === 1 ? "#E5E7EB" : "#F3F4F6",
+                  index === 0 ? "#F3F4F6" : index === 2 ? "#E5E7EB" : "#F3F4F6",
               }}
             >
               {index === 1 && (
                 <div className="absolute top-0 right-0 bg-[#fab400] text-[#fafafa] text-sm font-bold px-3 py-1 rounded-bl-sm rounded-br-sm rounded-tl-sm rounded-tr-lg">
-                  Populiariausias
+                  5% nuolaida!
+                </div>
+              )}
+              {index === 2 && (
+                <div className="absolute top-0 right-0 bg-[#f87171] text-[#fafafa] text-sm font-bold px-3 py-1 rounded-bl-sm rounded-br-sm rounded-tl-sm rounded-tr-lg">
+                  8% nuolaida!
                 </div>
               )}
               <div className="flex justify-center mb-4">

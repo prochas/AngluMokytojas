@@ -38,24 +38,39 @@ function AboutMe() {
     >
       <div ref={textRef} className="lg:w-[50%]">
         <h1 className="font-bold text-gray-900 lg:text-5xl">
-          Anglų kalbos mokytojas, kuris padės jums išmokti anglų kalbą!
+          Anglų kalbos pamokos, kurios duoda rezultatą – tiek mokykloje, tiek
+          egzamine.
         </h1>
-        <h2 className="text-[#71717A] text-sm lg:text-base mt-5">
-          Sveiki, esu Justinas Leganovič!
+        <h2 className="text-gray-900 text-sm lg:text-base mt-5">
+          Esu anglų kalbos korepetitorius, turintis 8 metų patirtį ir didelę
+          aistrą kalboms bei mokymui. Man 25 metai, laisvai kalbu keturiomis
+          kalbomis – lietuvių, anglų, rusų ir ispanų. Kalbos visada buvo mano
+          stiprybė ir pomėgis, o šis susidomėjimas išaugo į profesinį kelią,
+          kuriuo einu nuo mokyklos laikų.
         </h2>
-        <h2 className="text-[#71717A] text-sm lg:text-base mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra
-          diam ipsum, at rhoncus lacus tincidunt ut. Phasellus imperdiet nibh in
-          turpis eleifend feugiat. Nunc ligula ipsum, euismod in elit a, euismod
-          cursus neque. Fusce tincidunt semper ex, at gravida eros. Quisque id
-          vulputate nisl, ut auctor magna. Etiam porttitor erat vel nibh tempor,
-          vitae sagittis eros tincidunt. Curabitur maximus et neque eget
-          commodo. Quisque dui dolor, fringilla rhoncus sem a, maximus mollis
-          erat. Morbi laoreet nisl vitae diam interdum venenatis. Pellentesque
-          venenatis nibh id ante mollis dignissim. Ut metus metus, posuere at
-          condimentum in, commodo eu orci. Sed sed metus vitae ante mattis
-          posuere. Vestibulum tempor elementum odio a consequat. Vestibulum
-          molestie risus odio, eget posuere sem tempus vel.
+        <h2 className="text-gray-900 text-sm lg:text-base mt-5">
+          2017 m. baigiau West Nottingham Academy vidurinę mokyklą Jungtinėse
+          Amerikos Valstijose. Mokslai užsienyje man ne tik suteikė puikų
+          akademinį pasirengimą, bet ir leido panirti į autentišką kalbinę
+          aplinką – tai neįkainojama patirtis, kuria dalinuosi su savo mokiniais
+          iki šiol.
+        </h2>
+        <h2 className="text-gray-900 text-sm lg:text-base mt-5">
+          Man svarbu ne tik perteikti žinias, bet ir motyvuoti, įkvėpti, padėti
+          mokiniui suprasti, kodėl mokytis anglų kalbos verta ir kaip tai gali
+          atverti naujas galimybes. Dirbu atsakingai, kryptingai,
+          prisitaikydamas prie kiekvieno mokinio tempo, lygio ir tikslų – ar tai
+          būtų egzaminai, studijos užsienyje, ar tiesiog noras sklandžiau
+          kalbėti angliškai.
+        </h2>
+        <h2 className="text-gray-900 text-sm lg:text-base mt-5">
+          Būdamas sportininkas, esu įpratęs siekti rezultato – tai atsispindi ir
+          mano mokyme: struktūra, nuoseklumas, aiškumas ir pozityvi motyvacija.
+          Mokymasis su manimi – tai bendradarbiavimas, paremtas pasitikėjimu,
+          pastangomis ir bendru tikslu.
+        </h2>
+        <h2 className="text-gray-900 text-sm lg:text-base mt-5">
+          Pamokos vyksta nuotoliniu būdu – lanksčiai, patogiai ir efektyviai.
         </h2>
       </div>
       <div ref={imageRef} className="lg:w-[50%] w-full">

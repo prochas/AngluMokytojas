@@ -5,6 +5,9 @@ import PhoneIcon from "../../../public/images/phone.svg";
 import EmailIcon from "../../../public/images/email.svg";
 import Image from "next/image";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Contacts() {
   const [form, setForm] = useState({
     name: "",
@@ -24,21 +27,25 @@ function Contacts() {
     e.preventDefault();
     setLoading(true);
 
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    if (res.ok) {
-      setSuccess(true);
-      setForm({ name: "", email: "", phone: "", message: "" });
-    } else {
-      console.error("Failed to send message");
-      setSuccess(false);
+      if (res.ok) {
+        toast.success("Žinutė išsiųsta sėkmingai!");
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Nepavyko išsiųsti žinutės. Bandykite dar kartą.");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Įvyko klaida siunčiant žinutę.");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
@@ -106,12 +113,13 @@ function Contacts() {
         {/* RIGHT SIDE */}
         <div className="lg:w-1/2">
           <div className="font-extrabold text-2xl lg:text-5xl mt-5 lg:mt-0 space-y-1 lg:space-y-3 text-black">
-            <h2>Lets talk for</h2>
-            <h2>Something special</h2>
+            <h2>Susisiekite su manimi!</h2>
           </div>
           <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-6">
-            I seek to push the limits of creativity to create high-engaging,
-            user-friendly, and memorable interactive experiences.
+            Jei turite klausimų, pageidavimų ar norite sužinoti daugiau apie
+            mano teikiamas paslaugas, nedvejodami susisiekite su manimi. Aš
+            mielai atsakysiu į jūsų klausimus ir padėsiu rasti geriausią
+            sprendimą jūsų anglų kalbos mokymosi poreikiams!
           </p>
           <div className="font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4 text-black">
             <a className="flex items-center gap-2 group">
@@ -125,6 +133,7 @@ function Contacts() {
           </div>
         </div>
       </div>
+      <ToastContainer position="bottom-right" autoClose={3000} />
     </section>
   );
 }

@@ -43,3 +43,7 @@ body {
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
+
+button:disabled {
+  opacity: 0.5;
+}

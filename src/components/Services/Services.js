@@ -12,27 +12,27 @@ import Image from "next/image";
 const Services = () => {
   const data = [
     {
-      title: "5-8 kl. mokiniams​​",
+      title: "1–4 klasių mokiniams",
       description:
-        "Pagrindinių rašybos ir skyrybos taisyklių kartojimas, literatūros analizė, teksto kūrimo pagrindai.",
+        "1–4 klasių mokiniams Pamokos skirtos anglų kalbos pagrindų formavimui: žodyno kaupimui, tarimo lavinimui, garsų ir raidžių pažinimui, bei kalbos struktūros pradmenims. Dirbama žaismingai ir vaiko amžių atitinkančiais metodais, kad mokymasis būtų motyvuojantis ir įtraukiantis.",
       img: FirstServiceImg,
     },
     {
-      title: "Stojantiems į gimnaziją",
+      title: "5–10 klasių mokiniams",
       description:
-        "Pasiruošimas stojimui į geriausias Lietuvos gimnazijas. Gimnazijų standartus atitinkančios kalbos taikymo užduotys, unikalūs teksto suvokimai, teksto kūrimo užduotys.",
+        "5–10 klasių mokiniams Anglų kalbos pamokos orientuotos į gramatikos gilininimą, skaitymo ir rašymo įgūdžių tobulinimą, žodyno plėtrą, klausymo supratimą bei šnekamosios kalbos lavinimą. Padedu ruoštis pamokoms, kontroliniams darbams, atsiskaitymams ir tarpiniams patikrinimams. Dėmesys skiriamas tiek akademiniams rezultatams, tiek praktiniam kalbos vartojimui.",
       img: SecondServiceImg,
     },
     {
-      title: "Laikantiems PUPP",
+      title: "11–12 klasių mokiniams",
       description:
-        "Pasiruošimas 10 kl. lietuvių k. PUPP egzaminui: kalbos taikymo užduotys, įvairūs teksto suvokimai, pagalba rašant rašinį ar kalbėjimą.",
+        "11–12 klasių mokiniams Ruošimas Valstybinio anglų kalbos brandos egzamino (VBE) abiem dalims pagal atnaujintą egzaminų sistemą. Vienuoliktokams teikiama pagalba ruošiantis pirmajai egzamino daliai, kuri apima skaitymo ir klausymo užduotis. Dvyliktokams skiriamas dėmesys antrajai egzamino daliai – kalbėjimo ir rašymo įgūdžių lavinimui. Pamokose sistemingai dirbama su visomis egzamino dalimis, ugdoma kalbinė kompetencija ir atsakomybė už pasiruošimo procesą.",
       img: ThirdServiceImg,
     },
     {
-      title: "11-12 kl. mokiniams",
+      title: "Suaugusiesiems",
       description:
-        "Pasiruošimas valstybiniam lietuvių k. ir literatūros egzaminui: teksto interpretavimas, privalomosios literatūros analizė, rašinio struktūros pagrindai.",
+        "Suaugusiesiems Individualios anglų kalbos pamokos suaugusiesiems, pritaikytos pagal asmeninius poreikius ir tikslus. Mokymasis gali būti orientuotas į kalbos vartojimą profesinėje aplinkoje, kelionėse ar kasdienėse situacijose. Dėmesys skiriamas žodyno plėtrai, kalbėjimo laisvumui, pasitikėjimo ugdymui bei aiškiai ir taisyklingai kalbai tiek žodžiu, tiek raštu.",
       img: FourthServiceImg,
     },
   ];
