@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Quote from "../../../public/images/quotes.png";
 import Image from "next/image";
-
-import BgCover from "../../../public/images/bg-cover.png";
+import ServicesBG from "../../../public/images/services-background-v2.png";
 
 function Reviews() {
   const data = [
@@ -75,7 +74,13 @@ function Reviews() {
   };
 
   return (
-    <section className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16">
+    <section
+      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16"
+      style={{
+        backgroundImage: `url(${ServicesBG.src})`,
+        backgroundSize: "contain",
+      }}
+    >
       <h2 className="text-2xl lg:text-4xl text-center text-[#fafafa] font-bold">
         Atsiliepimai
       </h2>

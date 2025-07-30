@@ -4,8 +4,7 @@ import FirstServiceImg from "../../../public/images/first-photo.png";
 import SecondServiceImg from "../../../public/images/second-photo-v2.png";
 import ThirdServiceImg from "../../../public/images/third-photo.png";
 import FourthServiceImg from "../../../public/images/fourth-photo-v2.png";
-
-import BgCover from "../../../public/images/bg-cover.png";
+import ServicesBG from "../../../public/images/services-background-v2.png";
 
 import Image from "next/image";
 
@@ -38,15 +37,21 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 relative">
+    <section
+      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 relative"
+      style={{
+        backgroundImage: `url(${ServicesBG.src})`,
+        backgroundSize: "contain",
+      }}
+    >
       <h2 className="text-2xl lg:text-4xl text-center text-white font-bold">
         Paslaugos
       </h2>
-      <div className="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="container max-w-[1650px] mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {data.map((service, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 hover:bg-[rgb(39,39,42)] border-1 flex gap-4 items-start"
+            className="p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 bg-[rgb(39,39,42)] border-1 flex gap-4 items-start"
           >
             <Image
               src={service.img}
