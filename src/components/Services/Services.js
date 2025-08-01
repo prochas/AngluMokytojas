@@ -51,7 +51,7 @@ const Services = () => {
         {data.map((service, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-lg border-white transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 bg-[rgb(39,39,42)] border-1 flex gap-4 items-start"
+            className="p-6 rounded-lg shadow-lg border-white transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 bg-[#191b20] border-1 flex gap-4 items-start"
           >
             <Image
               src={service.img}

@@ -14,6 +14,10 @@ const RegistrationModal = dynamic(
   }
 );
 
+const AboutMeModal = dynamic(() => import("../AboutMeModal/AboutMeModal"), {
+  ssr: false,
+});
+
 const features = [
   "Pamokos pritaikytos A1–C1 lygiams",
   "Ruošimas egzaminams: VBE, PUPP",
@@ -24,6 +28,7 @@ const features = [
 
 function AboutMe() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAboutMeModalOpen, setIsAboutMeModalOpen] = useState(false);
   const sectionRef = useRef(null);
   const textRef = useRef(null);
   const imageRef = useRef(null);
@@ -86,12 +91,19 @@ function AboutMe() {
               </div>
             ))}
           </div>
-          <div ref={buttonRef} className="mt-8">
+          <div ref={buttonRef} className="flex gap-5 mt-8">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-black w-[300px] transition-all duration-300 text-[#fafafa] px-3 py-3 rounded flex items-center justify-center gap-x-3 font-semibold cursor-pointer hover:scale-105"
+              className="bg-black w-[300px] transition-all duration-300 text-[#fafafa] px-3 py-3 cursor-pointer rounded flex items-center justify-center gap-x-3 font-semibold hover:scale-105"
             >
               Registruotis į pamokas
+            </button>
+            <button
+              className="border border-gray-300 w-[200px] text-gray-800 px-4 py-2 transition-all duration-300 py-3 px-3 rounded hover:bg-gray-100 font-semibold hover:scale-105"
+              style={{ cursor: "pointer" }}
+              onClick={() => setIsAboutMeModalOpen(true)}
+            >
+              Sužinoti daugiau
             </button>
           </div>
         </div>
@@ -103,6 +115,12 @@ function AboutMe() {
         <RegistrationModal
           isOpen={isModalOpen}
           onRequestClose={() => setIsModalOpen(false)}
+        />
+      )}
+      {isAboutMeModalOpen && (
+        <AboutMeModal
+          isOpen={isAboutMeModalOpen}
+          onRequestClose={() => setIsAboutMeModalOpen(false)}
         />
       )}
     </React.Fragment>
