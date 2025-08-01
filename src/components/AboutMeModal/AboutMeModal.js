@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 import Close from "../../../public/images/delete.png";
-import AboutMeImg from "../../../public/images/aboutme.jpg";
+import AboutMeImg from "../../../public/images/aboutmev2.jpg";
 
 import Modal from "react-modal";
 
@@ -16,7 +16,7 @@ export default function AboutMeModal({ isOpen, onRequestClose }) {
       contentLabel="Registration Modal"
       ariaHideApp={false}
       overlayClassName="fixed inset-0 bg-black/40 z-50 flex items-center justify-center"
-      className="bg-white p-9 rounded-lg shadow-lg w-[95%] max-w-5xl py-8 outline-none relative"
+      className="bg-white p-9 rounded-lg shadow-lg w-[95%] max-w-6xl py-8 outline-none relative"
     >
       <button
         onClick={onRequestClose}
@@ -30,10 +30,10 @@ export default function AboutMeModal({ isOpen, onRequestClose }) {
           alt="About Me"
           className="w-full h-auto rounded-lg"
           style={{
-            maxHeight: "400px",
-            width: "230px",
+            maxHeight: "500px",
+            width: "300px",
             objectFit: "cover",
-            height: "230px",
+            height: "500px",
             borderRadius: "8px",
           }}
         />
@@ -65,9 +65,6 @@ export default function AboutMeModal({ isOpen, onRequestClose }) {
             ir mano mokyme: struktūra, nuoseklumas, aiškumas ir pozityvi
             motyvacija. Mokymasis su manimi – tai bendradarbiavimas, paremtas
             pasitikėjimu, pastangomis ir bendru tikslu.
-          </p>
-          <p className="text-gray-800 mt-6 text-lg">
-            Pamokos vyksta nuotoliniu būdu – lanksčiai, patogiai ir efektyviai.
           </p>
         </div>
       </div>

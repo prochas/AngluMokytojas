@@ -99,7 +99,7 @@ function AboutMe() {
               Registruotis į pamokas
             </button>
             <button
-              className="border border-gray-300 w-[200px] text-gray-800 px-4 py-2 transition-all duration-300 py-3 px-3 rounded hover:bg-gray-100 font-semibold hover:scale-105"
+              className="border border-gray-300 outline-none w-[200px] text-gray-800 px-4 py-2 transition-all duration-300 py-3 px-3 rounded hover:bg-gray-100 font-semibold hover:scale-105"
               style={{ cursor: "pointer" }}
               onClick={() => setIsAboutMeModalOpen(true)}
             >
