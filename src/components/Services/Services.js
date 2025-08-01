@@ -13,25 +13,25 @@ const Services = () => {
     {
       title: "1–4 klasių mokiniams",
       description:
-        "1–4 klasių mokiniams Pamokos skirtos anglų kalbos pagrindų formavimui: žodyno kaupimui, tarimo lavinimui, garsų ir raidžių pažinimui, bei kalbos struktūros pradmenims. Dirbama žaismingai ir vaiko amžių atitinkančiais metodais, kad mokymasis būtų motyvuojantis ir įtraukiantis.",
+        "Pamokos skirtos anglų kalbos pagrindų formavimui: žodyno kaupimui, tarimo lavinimui, garsų ir raidžių pažinimui, bei kalbos struktūros pradmenims. Dirbama žaismingai ir vaiko amžių atitinkančiais metodais, kad mokymasis būtų motyvuojantis ir įtraukiantis.",
       img: FirstServiceImg,
     },
     {
       title: "5–10 klasių mokiniams",
       description:
-        "5–10 klasių mokiniams Anglų kalbos pamokos orientuotos į gramatikos gilininimą, skaitymo ir rašymo įgūdžių tobulinimą, žodyno plėtrą, klausymo supratimą bei šnekamosios kalbos lavinimą. Padedu ruoštis pamokoms, kontroliniams darbams, atsiskaitymams ir tarpiniams patikrinimams. Dėmesys skiriamas tiek akademiniams rezultatams, tiek praktiniam kalbos vartojimui.",
+        "Pamokos orientuotos į gramatikos gilininimą, skaitymo ir rašymo įgūdžių tobulinimą, žodyno plėtrą, klausymo supratimą bei šnekamosios kalbos lavinimą. Padedu ruoštis pamokoms, kontroliniams darbams, atsiskaitymams ir tarpiniams patikrinimams. Dėmesys skiriamas tiek akademiniams rezultatams, tiek praktiniam kalbos vartojimui.",
       img: SecondServiceImg,
     },
     {
       title: "11–12 klasių mokiniams",
       description:
-        "11–12 klasių mokiniams Ruošimas Valstybinio anglų kalbos brandos egzamino (VBE) abiem dalims pagal atnaujintą egzaminų sistemą. Vienuoliktokams teikiama pagalba ruošiantis pirmajai egzamino daliai, kuri apima skaitymo ir klausymo užduotis. Dvyliktokams skiriamas dėmesys antrajai egzamino daliai – kalbėjimo ir rašymo įgūdžių lavinimui. Pamokose sistemingai dirbama su visomis egzamino dalimis, ugdoma kalbinė kompetencija ir atsakomybė už pasiruošimo procesą.",
+        "Ruošimas Valstybinio anglų kalbos brandos egzamino (VBE) abiem dalims pagal atnaujintą egzaminų sistemą. Vienuoliktokams teikiama pagalba ruošiantis pirmajai egzamino daliai, kuri apima skaitymo ir klausymo užduotis. Dvyliktokams skiriamas dėmesys antrajai egzamino daliai – kalbėjimo ir rašymo įgūdžių lavinimui. Pamokose sistemingai dirbama su visomis egzamino dalimis, ugdoma kalbinė kompetencija ir atsakomybė už pasiruošimo procesą.",
       img: ThirdServiceImg,
     },
     {
       title: "Suaugusiesiems",
       description:
-        "Suaugusiesiems Individualios anglų kalbos pamokos suaugusiesiems, pritaikytos pagal asmeninius poreikius ir tikslus. Mokymasis gali būti orientuotas į kalbos vartojimą profesinėje aplinkoje, kelionėse ar kasdienėse situacijose. Dėmesys skiriamas žodyno plėtrai, kalbėjimo laisvumui, pasitikėjimo ugdymui bei aiškiai ir taisyklingai kalbai tiek žodžiu, tiek raštu.",
+        "Individualios anglų kalbos pamokos suaugusiesiems, pritaikytos pagal asmeninius poreikius ir tikslus. Mokymasis gali būti orientuotas į kalbos vartojimą profesinėje aplinkoje, kelionėse ar kasdienėse situacijose. Dėmesys skiriamas žodyno plėtrai, kalbėjimo laisvumui, pasitikėjimo ugdymui bei aiškiai ir taisyklingai kalbai tiek žodžiu, tiek raštu.",
       img: FourthServiceImg,
     },
   ];
@@ -51,7 +51,7 @@ const Services = () => {
         {data.map((service, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 bg-[rgb(39,39,42)] border-1 flex gap-4 items-start"
+            className="p-6 rounded-lg shadow-lg border-white transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 bg-[rgb(39,39,42)] border-1 flex gap-4 items-start"
           >
             <Image
               src={service.img}

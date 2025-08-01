@@ -44,7 +44,7 @@ function Prices() {
           {data.map((price, index) => (
             <div
               key={index}
-              className="p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border-1 relative"
+              className="p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative border-none"
               style={{
                 backgroundColor:
                   index === 0 ? "#F3F4F6" : index === 2 ? "#E5E7EB" : "#F3F4F6",
