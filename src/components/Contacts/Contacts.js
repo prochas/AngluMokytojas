@@ -49,7 +49,10 @@ function Contacts() {
   };
 
   return (
-    <section className="bg-[#FAFAFA] w-full mb-8 pb-8 lg:mb-16 lg:pb-16">
+    <section
+      id="kontaktai"
+      className="bg-[#FAFAFA] w-full mb-8 pb-8 lg:mb-16 lg:pb-16 scroll-mt-20"
+    >
       <h2 className="text-2xl lg:text-4xl text-center text-black font-bold">
         Kontaktai
       </h2>

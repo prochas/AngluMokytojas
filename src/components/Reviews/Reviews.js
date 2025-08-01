@@ -57,7 +57,8 @@ function Reviews() {
 
   return (
     <section
-      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 overflow-hidden"
+      id="atsiliepimai"
+      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 scroll-mt-10"
       style={{
         backgroundImage: `url(${ServicesBG.src})`,
         backgroundSize: "contain",

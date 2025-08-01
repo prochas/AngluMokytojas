@@ -38,7 +38,8 @@ const Services = () => {
 
   return (
     <section
-      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 relative"
+      id="paslaugos"
+      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 relative scroll-mt-10"
       style={{
         backgroundImage: `url(${ServicesBG.src})`,
         backgroundSize: "contain",

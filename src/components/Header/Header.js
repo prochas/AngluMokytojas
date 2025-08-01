@@ -19,46 +19,46 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center">
           <Image className="h-9 cursor-pointer" alt="Logo" src={Logo} />
           <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
-            <li className="group">
+            <li className="group hover:scale-105 transition-transform duration-300">
               <Link
-                href="/"
-                className="text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                href="#apie-mane"
+                className="text-gray-800  transition-colors duration-300"
               >
                 Apie mane
               </Link>
               <span className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex" />
             </li>
-            <li className="group">
+            <li className="group hover:scale-105 transition-transform duration-300">
               <Link
-                href="/about"
-                className="text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                href="#paslaugos"
+                className="text-gray-800 transition-colors duration-300"
               >
                 Paslaugos
               </Link>
               <span className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex" />
             </li>
-            <li className="group">
+            <li className="group hover:scale-105 transition-transform duration-300">
               <Link
-                href="/about"
-                className="text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                href="#kainos"
+                className="text-gray-800  transition-colors duration-300"
               >
                 Kainos
               </Link>
               <span className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex" />
             </li>
-            <li className="group">
+            <li className="group hover:scale-105 transition-transform duration-300">
               <Link
-                href="/about"
-                className="text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                href="#atsiliepimai"
+                className="text-gray-800 transition-colors duration-300"
               >
                 Atsiliepimai
               </Link>
               <span className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex" />
             </li>
-            <li className="group">
+            <li className="group hover:scale-105 transition-transform duration-300">
               <Link
-                href="/about"
-                className="text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                href="#kontaktai"
+                className="text-gray-800 transition-colors duration-300 "
               >
                 Kontaktai
               </Link>

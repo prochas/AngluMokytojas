@@ -67,8 +67,9 @@ function AboutMe() {
   return (
     <React.Fragment>
       <section
+        id="apie-mane"
         ref={sectionRef}
-        className="flex justify-between py-14 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse"
+        className="flex justify-between py-14 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse scroll-mt-20"
       >
         <div ref={textRef} className="lg:w-[50%] text-gray-900">
           <h1 className="font-extrabold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.15]">
