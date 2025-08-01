@@ -115,7 +115,7 @@ function Contacts() {
           <div className="font-extrabold text-2xl lg:text-5xl mt-5 lg:mt-0 space-y-1 lg:space-y-3 text-black">
             <h2>Susisiekite su manimi!</h2>
           </div>
-          <p className="text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-6">
+          <p className="text-lg lg:text-md mt-4 leading-relaxed text-black">
             Jei turite klausimų, pageidavimų ar norite sužinoti daugiau apie
             mano teikiamas paslaugas, nedvejodami susisiekite su manimi. Aš
             mielai atsakysiu į jūsų klausimus ir padėsiu rasti geriausią

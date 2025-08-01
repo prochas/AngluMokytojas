@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Quote from "../../../public/images/quotes.png";
 import Image from "next/image";
 import ServicesBG from "../../../public/images/services-background-v2.png";
+
+import styles from "./styles.module.scss";
 
 function Reviews() {
   const data = [
@@ -51,31 +53,11 @@ function Reviews() {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleItems = 3; // Number of visible items in the carousel
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      moveRight();
-    }, 5000); // Automatically scroll every 5 seconds
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const moveRight = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex + 1) % (data.length - visibleItems + 1)
-    );
-  };
-
-  const moveLeft = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - visibleItems : prevIndex - 1
-    );
-  };
+  const repeated = [...data, ...data];
 
   return (
     <section
-      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16"
+      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 overflow-hidden"
       style={{
         backgroundImage: `url(${ServicesBG.src})`,
         backgroundSize: "contain",
@@ -84,56 +66,44 @@ function Reviews() {
       <h2 className="text-2xl lg:text-4xl text-center text-[#fafafa] font-bold">
         Atsiliepimai
       </h2>
-      <div className="carousel overflow-hidden relative flex items-center justify-center p-6 rounded-lg shadow-lg mt-8">
-        <button
-          className="carousel-button left text-[#E5E7EB] hover:text-gray-800 text-2xl font-bold px-4 absolute left-0 z-10"
-          onClick={moveLeft}
-        >
-          {"<"}
-        </button>
-        <div
-          className="carousel-track flex transition-transform duration-500 ease-in-out"
-          style={{
-            transform: `translateX(-${(currentIndex * 100) / visibleItems}%)`,
-            width: `${(data.length / visibleItems) * 100}%`,
-          }}
-        >
-          {data.map((item, index) => (
-            <div key={index} className="carousel-item flex-shrink-0 w-1/3 px-4">
-              <div
-                className="review bg-[#FAFAFA] p-4 rounded-lg shadow-md flex items-start"
-                style={{ minHeight: "250px" }}
-              >
+      <div className="mt-8 group relative overflow-hidden">
+        <div className={`${styles.scrollTrack} ${styles.paused}`}>
+          {repeated.map((review, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-[300px] sm:w-[320px] lg:w-[600px] mx-4 p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
+              style={{ backgroundColor: "#F3F4F6" }}
+            >
+              <div className="flex items-center mb-4">
                 <Image
-                  src={item.image}
+                  src={review.image}
                   alt="Quote"
-                  className="w-11 h-11 mr-4"
-                  style={{ alignSelf: "flex-start" }}
+                  width={40}
+                  height={40}
+                  className="mr-5"
                 />
-                <div className="flex flex-col">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {item.name}
-                  </h3>
-                  <small className="text-gray-400">{item.date}</small>
-                  <p className="text-gray-600 mt-2">{item.review}</p>
-                </div>
+                <h3 className="text-xl font-bold text-black">{review.name}</h3>
               </div>
+              <p className="text-sm lg:text-base text-gray-800 mb-4">
+                {review.review}
+              </p>
+              <p className="text-sm text-gray-500">
+                {new Date(review.date).toLocaleDateString("lt-LT", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
             </div>
           ))}
         </div>
-        <button
-          className="carousel-button right text-[#E5E7EB] hover:text-gray-800 text-2xl font-bold px-4 absolute right-0 z-10"
-          onClick={moveRight}
-        >
-          {">"}
-        </button>
       </div>
-      <div className="container mx-auto mt-8 flex justify-center">
+      <div className="container mx-auto flex mt-10 justify-center">
         <a
           href="https://paslaugos.lt/justinas-mk557"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#fafafa] w-[200px] transition-all w-[250px] duration-300 text-black px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
+          className="bg-[#fafafa] w-[250px] transition-all duration-300 text-black px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
         >
           Peržiūrėti visus atsiliepimus!
         </a>

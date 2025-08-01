@@ -1,0 +1,19 @@
+@keyframes scrollReviews {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.scrollTrack {
+    animation: scrollReviews 50s linear infinite;
+    display: flex;
+    width: max-content;
+}
+
+.paused:hover {
+    animation-play-state: paused !important;
+}
