@@ -1,5 +1,7 @@
 import { DM_Sans } from "next/font/google";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Header from "@/components/Header/Header";
 import "./globals.css";
@@ -47,6 +49,7 @@ export default function RootLayout({ children }) {
       <body className="antialiased bg-gray-50 text-gray-900">
         <Header />
         <main>{children}</main>
+        <ToastContainer position="bottom-right" autoClose={3000} />
       </body>
     </html>
   );

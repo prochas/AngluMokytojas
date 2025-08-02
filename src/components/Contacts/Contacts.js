@@ -17,7 +17,6 @@ function Contacts() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -66,7 +65,7 @@ function Contacts() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full"
+              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
               placeholder="Vardas"
               type="text"
               required
@@ -75,7 +74,7 @@ function Contacts() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full"
+              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
               placeholder="El. paštas"
               type="email"
               required
@@ -84,7 +83,7 @@ function Contacts() {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full"
+              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
               placeholder="Tel. numeris"
               type="tel"
             />
@@ -92,9 +91,9 @@ function Contacts() {
               name="message"
               value={form.message}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full"
+              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
               placeholder="Žinutė"
-              rows="5"
+              rows="6"
               style={{ resize: "none" }}
               required
             ></textarea>
@@ -105,26 +104,21 @@ function Contacts() {
             >
               {loading ? "Siunčiama..." : "Siųsti žinutę"}
             </button>
-            {success && (
-              <p className="text-green-600 font-medium mt-2">
-                Žinutė išsiųsta sėkmingai!
-              </p>
-            )}
           </form>
         </div>
 
         {/* RIGHT SIDE */}
         <div className="lg:w-1/2">
-          <div className="font-extrabold text-2xl lg:text-5xl mt-5 lg:mt-0 space-y-1 lg:space-y-3 text-black">
+          <div className="font-extrabold text-2xl lg:text-5xl mt-5 lg:mt-0 space-y-1 lg:space-y-3 text-gray-900">
             <h2>Susisiekite su manimi!</h2>
           </div>
-          <p className="text-lg lg:text-md mt-4 leading-relaxed text-black">
+          <p className="text-lg lg:text-md mt-4 leading-relaxed text-gray-900">
             Jei turite klausimų, pageidavimų ar norite sužinoti daugiau apie
             mano teikiamas paslaugas, nedvejodami susisiekite su manimi. Aš
             mielai atsakysiu į jūsų klausimus ir padėsiu rasti geriausią
             sprendimą jūsų anglų kalbos mokymosi poreikiams!
           </p>
-          <div className="font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4 text-black">
+          <div className="font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4 text-gray-900">
             <a className="flex items-center gap-2 group">
               <Image src={EmailIcon} alt="email icon" width={20} height={50} />
               Youremail@gmail.com
@@ -136,7 +130,6 @@ function Contacts() {
           </div>
         </div>
       </div>
-      <ToastContainer position="bottom-right" autoClose={3000} />
     </section>
   );
 }
