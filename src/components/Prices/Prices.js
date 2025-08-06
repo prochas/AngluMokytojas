@@ -40,7 +40,7 @@ function Prices() {
         <h2 className="text-2xl lg:text-4xl text-center text-black font-bold">
           Kainos
         </h2>
-        <div className="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-12">
+        <div className="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 lg:px-12">
           {data.map((price, index) => (
             <div
               key={index}
@@ -123,10 +123,10 @@ function Prices() {
             </div>
           ))}
         </div>
-        <div className="container mx-auto mt-8 flex justify-center">
+        <div className="container mx-auto mt-8 flex justify-center px-5 lg:px-12">
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-black w-[200px] transition-all duration-300 text-[#fafafa] px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
+            className="bg-black w-full lg:w-[200px] transition-all duration-300 text-[#fafafa] px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
           >
             Registruotis!
           </button>

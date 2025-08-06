@@ -39,7 +39,7 @@ const Services = () => {
   return (
     <section
       id="paslaugos"
-      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 relative scroll-mt-10"
+      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 relative scroll-mt-10 px-5 lg:px-28"
       style={{
         backgroundImage: `url(${ServicesBG.src})`,
         backgroundSize: "contain",
@@ -52,7 +52,7 @@ const Services = () => {
         {data.map((service, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-lg border-white transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 bg-[#191b20] border-1 flex gap-4 items-start"
+            className="p-6 rounded-lg shadow-lg border-white transition-transform duration-300 ease-in-out hover:shadow-xl hover:scale-101 bg-[#191b20] border-1 flex flex-col lg:flex-row gap-4 items-center lg:items-start"
           >
             <Image
               src={service.img}
@@ -60,10 +60,10 @@ const Services = () => {
               className="w-40 h-40 object-cover"
             />
             <div className="flex flex-col">
-              <h3 className="text-xl font-bold mb-2 text-white">
+              <h3 className="text-xl font-bold mb-2 text-white lg:text-left text-center">
                 {service.title}
               </h3>
-              <p className="text-white">{service.description}</p>
+              <p className="text-white lg:text-left text-justify">{service.description}</p>
             </div>
           </div>
         ))}

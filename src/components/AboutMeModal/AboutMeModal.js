@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 import Close from "../../../public/images/delete.png";
-import AboutMeImg from "../../../public/images/aboutmev2.jpg";
+import AboutMeImg from "../../../public/images/about-me-v3.jpeg";
 
 import Modal from "react-modal";
 
@@ -29,13 +29,7 @@ export default function AboutMeModal({ isOpen, onRequestClose }) {
           src={AboutMeImg}
           alt="About Me"
           className="w-full h-auto rounded-lg"
-          style={{
-            maxHeight: "500px",
-            width: "300px",
-            objectFit: "cover",
-            height: "500px",
-            borderRadius: "8px",
-          }}
+          style={{ maxWidth: "300px", maxHeight: "400px", objectFit: "cover" }}
         />
         <div className="flex-1">
           <p className="text-gray-800 mb-6 text-lg">

@@ -83,7 +83,7 @@ function Reviews() {
           {repeated.map((review, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[300px] sm:w-[320px] lg:w-[600px] mx-4 p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
+              className="flex-shrink-0 w-[400px] sm:w-[320px] lg:w-[600px] mx-4 p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
               style={{ backgroundColor: "#F3F4F6" }}
             >
               <div className="flex items-start justify-between mb-1">
@@ -128,12 +128,12 @@ function Reviews() {
           ))}
         </div>
       </div>
-      <div className="container mx-auto flex mt-10 justify-center">
+      <div className="container mx-auto flex mt-10 justify-center px-5 lg:px-12">
         <a
           href="https://paslaugos.lt/justinas-mk557"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#fafafa] w-[250px] transition-all duration-300 text-black px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
+          className="bg-[#fafafa] w-full lg:w-[250px] transition-all duration-300 text-black px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
         >
           Peržiūrėti visus atsiliepimus!
         </a>

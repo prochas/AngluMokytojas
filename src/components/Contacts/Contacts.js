@@ -50,7 +50,7 @@ function Contacts() {
   return (
     <section
       id="kontaktai"
-      className="bg-[#FAFAFA] w-full mb-8 pb-8 lg:mb-16 lg:pb-16 scroll-mt-20"
+      className="bg-[#FAFAFA] w-full mb-8 pb-8 lg:mb-16 lg:pb-16 scroll-mt-20 px-5 lg:px-12"
     >
       <h2 className="text-2xl lg:text-4xl text-center text-black font-bold">
         Kontaktai
@@ -119,11 +119,11 @@ function Contacts() {
             sprendimą jūsų anglų kalbos mokymosi poreikiams!
           </p>
           <div className="font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4 text-gray-900">
-            <a className="flex items-center gap-2 group">
+            <a className="flex items-center gap-2 group text-lg lg:text-md">
               <Image src={EmailIcon} alt="email icon" width={20} height={50} />
               Youremail@gmail.com
             </a>
-            <a className="flex items-center gap-2 group">
+            <a className="flex items-center gap-2 group text-lg lg:text-md">
               <Image src={PhoneIcon} alt="phone icon" width={20} height={50} />
               +370 123 45678
             </a>

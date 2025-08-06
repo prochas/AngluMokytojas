@@ -72,7 +72,7 @@ function AboutMe() {
         className="flex justify-between py-14 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse scroll-mt-20"
       >
         <div ref={textRef} className="lg:w-[50%] text-gray-900">
-          <h1 className="font-extrabold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.15]">
+          <h1 className="font-extrabold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.15] lg:mt-0 mt-4">
             Anglų kalba kiekvienam – lengvai ir aiškiai
           </h1>
           <h2 className="text-lg lg:text-2xl mt-4 leading-relaxed">
@@ -92,15 +92,18 @@ function AboutMe() {
               </div>
             ))}
           </div>
-          <div ref={buttonRef} className="flex gap-5 mt-8">
+          <div
+            ref={buttonRef}
+            className="flex flex-col lg:flex-row gap-5 mt-8 w-full"
+          >
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-black w-[300px] transition-all duration-300 text-[#fafafa] px-3 py-3 cursor-pointer rounded flex items-center justify-center gap-x-3 font-semibold hover:scale-105"
+              className="bg-black w-full lg:w-[300px] transition-all duration-300 text-[#fafafa] px-3 py-3 cursor-pointer rounded flex items-center justify-center gap-x-3 font-semibold hover:scale-105"
             >
               Registruotis į pamokas
             </button>
             <button
-              className="border border-gray-300 outline-none w-[200px] text-gray-800 px-4 py-2 transition-all duration-300 py-3 px-3 rounded hover:bg-gray-100 font-semibold hover:scale-105"
+              className="border border-gray-300 outline-none w-full lg:w-[200px] text-gray-800 px-4 py-2 transition-all duration-300 py-3 px-3 rounded hover:bg-gray-100 font-semibold hover:scale-105"
               style={{ cursor: "pointer" }}
               onClick={() => setIsAboutMeModalOpen(true)}
             >

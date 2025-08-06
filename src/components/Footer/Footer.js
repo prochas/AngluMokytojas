@@ -4,7 +4,7 @@ import Logo from "../../../public/images/logo.svg";
 
 function Footer() {
   return (
-    <footer className="bg-black px-5 lg:px-28 py-3 lg:py-6 flex items-center justify-between mt-16">
+    <footer className="bg-black px-5 lg:px-28 py-6 flex items-center justify-between mt-8 lg:mt-16">
       <Image
         className="invert h-5 lg:h-9 cursor-pointer"
         alt="Logo"
