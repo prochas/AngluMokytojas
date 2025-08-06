@@ -79,53 +79,55 @@ function Reviews() {
         Atsiliepimai
       </h2>
       <div className="mt-8 group relative overflow-hidden">
-        <div className={`${styles.scrollTrack} ${styles.paused}`}>
-          {repeated.map((review, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-[400px] sm:w-[320px] lg:w-[600px] mx-4 p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
-              style={{ backgroundColor: "#F3F4F6" }}
-            >
-              <div className="flex items-start justify-between mb-1">
-                <div className="flex flex-col items-left mb-1">
-                  <div className="flex items-center mb-4">
-                    <Image
-                      src={review.image}
-                      alt="Quote"
-                      width={40}
-                      height={40}
-                      className="mr-5"
-                    />
-                    <h3 className="text-xl font-bold text-black">
-                      {review.name}
-                    </h3>
+        <div className="overflow-x-auto sm:overflow-hidden">
+          <div className={`${styles.scrollTrack} ${styles.paused}`}>
+            {repeated.map((review, index) => (
+              <div
+                key={index}
+                className={styles.reviewCard}
+                style={{ backgroundColor: "#F3F4F6" }}
+              >
+                <div className="flex items-start justify-between mb-1">
+                  <div className="flex flex-col items-left mb-1">
+                    <div className="flex items-center mb-4">
+                      <Image
+                        src={review.image}
+                        alt="Quote"
+                        width={40}
+                        height={40}
+                        className="mr-5"
+                      />
+                      <h3 className="text-xl font-bold text-black">
+                        {review.name}
+                      </h3>
+                    </div>
+                    <div className="flex gap-1 mb-3">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <Star key={i} size={18} fill="gold" stroke="gold" />
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex gap-1 mb-3">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} size={18} fill="gold" stroke="gold" />
-                    ))}
-                  </div>
+                  <Image
+                    src={review.person}
+                    alt="Person"
+                    width={70}
+                    height={70}
+                    className="rounded-full mr-3"
+                  />
                 </div>
-                <Image
-                  src={review.person}
-                  alt="Person"
-                  width={70}
-                  height={70}
-                  className="rounded-full mr-3"
-                />
+                <p className="text-sm lg:text-base text-gray-800 mb-4">
+                  {review.review}
+                </p>
+                <p className="text-sm text-gray-500">
+                  {new Date(review.date).toLocaleDateString("lt-LT", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </p>
               </div>
-              <p className="text-sm lg:text-base text-gray-800 mb-4">
-                {review.review}
-              </p>
-              <p className="text-sm text-gray-500">
-                {new Date(review.date).toLocaleDateString("lt-LT", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <div className="container mx-auto flex mt-10 justify-center px-5 lg:px-12">

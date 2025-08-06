@@ -7,6 +7,8 @@ import Link from "next/link";
 import Logo from "../../../public/images/logo.svg";
 import ScrollShadowWrapper from "../ScrollShadowWrapper/ScrollShadowWrapper";
 import RegistrationModal from "../RegisterModal/RegisterModal";
+import { Menu } from "lucide-react";
+import { X } from "lucide-react";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,7 +25,7 @@ export default function Header() {
   return (
     <React.Fragment>
       <ScrollShadowWrapper>
-        <div className="container mx-auto flex justify-between items-center px-4 py-0">
+        <div className="container mx-auto flex justify-between items-center py-0">
           <Image className="h-9 cursor-pointer" alt="Logo" src={Logo} />
 
           {/* Desktop navigation */}
@@ -49,10 +51,9 @@ export default function Header() {
               </li>
             ))}
           </ul>
-
           {/* Desktop register button */}
           <button
-            className="hidden relative lg:inline-block px-4 py-2 font-medium group"
+            className="hidden relative lg:inline-block px-4 py-2 font-medium group cursor-pointer"
             onClick={() => setIsModalOpen(true)}
           >
             <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -61,24 +62,33 @@ export default function Header() {
               Registracija
             </span>
           </button>
-
-          {/* Mobile burger */}
-          <button
-            className="lg:hidden focus:outline-none z-50"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <div className="space-y-1">
-              <span className="block w-6 h-0.5 bg-black"></span>
-              <span className="block w-6 h-0.5 bg-black"></span>
-              <span className="block w-6 h-0.5 bg-black"></span>
-            </div>
-          </button>
+          <div className="flex items-center gap-x-6 lg:hidden">
+            <button
+              onClick={() => {
+                setIsModalOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
+              className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition"
+            >
+              Registracija
+            </button>
+            {/* Mobile burger */}
+            <button
+              className="lg:hidden focus:outline-none z-50"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="text-black" size={27} />
+              ) : (
+                <Menu className="text-black" size={27} />
+              )}
+            </button>
+          </div>
         </div>
       </ScrollShadowWrapper>
-
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 w-4/5 max-w-sm h-full bg-[#fafafa] z-40 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         } shadow-lg p-6`}
       >
@@ -99,20 +109,8 @@ export default function Header() {
               </button>
             </li>
           ))}
-          <li>
-            <button
-              onClick={() => {
-                setIsModalOpen(true);
-                setIsMobileMenuOpen(false);
-              }}
-              className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition"
-            >
-              Registracija
-            </button>
-          </li>
         </ul>
       </div>
-
       {/* Overlay when menu is open */}
       {isMobileMenuOpen && (
         <div
@@ -120,7 +118,6 @@ export default function Header() {
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
-
       {isModalOpen && (
         <RegistrationModal
           isOpen={isModalOpen}
