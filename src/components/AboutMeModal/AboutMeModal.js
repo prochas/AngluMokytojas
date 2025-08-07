@@ -24,7 +24,7 @@ export default function AboutMeModal({ isOpen, onRequestClose }) {
       >
         <Image src={Close} alt="Close" className="w-7 h-7" />
       </button>
-      <div className="flex gap-8">
+      <div className="flex gap-8 justify-center items-center">
         <Image
           src={AboutMeImg}
           alt="About Me"
