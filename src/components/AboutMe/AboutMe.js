@@ -73,12 +73,12 @@ function AboutMe() {
       >
         <div ref={textRef} className="lg:w-[50%] text-gray-900">
           <h1 className="font-extrabold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.15] lg:mt-0 mt-4">
-            Anglų kalba kiekvienam – lengvai ir aiškiai
+            Anglų kalbos pamokos, kurios įkvepia mokytis ir duoda tikrus
+            rezultatus.
           </h1>
           <h2 className="text-lg lg:text-2xl mt-4 leading-relaxed">
-            Dirbu pagal aiškią sistemą, padedančią lavinti kalbėjimo, rašymo ir
-            supratimo įgūdžius bei ruoštis egzaminams.{" "}
-            <strong>Kiekvienas mokinys gauna individualų dėmesį.</strong>
+            Dirbu pagal veiksmingą sistemą, lavinančią anglų kalbos įgūdžius.{" "}
+            <strong>Kiekvienam mokiniui skiriu individualų dėmesį.</strong>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
             {features.map((feature, index) => (
@@ -107,7 +107,7 @@ function AboutMe() {
               style={{ cursor: "pointer" }}
               onClick={() => setIsAboutMeModalOpen(true)}
             >
-              Sužinoti daugiau
+              Apie mane
             </button>
           </div>
         </div>
