@@ -55,7 +55,7 @@ export default function RegistrationModal({ isOpen, onRequestClose }) {
         contentLabel="Registration Modal"
         ariaHideApp={false}
         overlayClassName="fixed inset-0 bg-black/40 z-50 flex items-center justify-center"
-        className="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-2xl outline-none relative"
+        className="bg-white w-full sm:w-[90%] max-w-2xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-lg sm:rounded-lg shadow-lg outline-none relative"
       >
         <h2 className="text-xl font-semibold mb-4 text-[#111827]">
           Greitai susisieksime ir aptarsime geriausias mokymosi galimybes!

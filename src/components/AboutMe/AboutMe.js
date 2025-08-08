@@ -19,11 +19,11 @@ const AboutMeModal = dynamic(() => import("../AboutMeModal/AboutMeModal"), {
 });
 
 const features = [
-  "Pamokos pritaikytos A1–C1 lygiams",
-  "Ruošimas egzaminams: VBE, PUPP",
-  "Nuosekli pažangos stebėsena ir grįžtamasis ryšys",
   "Lankstus tvarkaraštis – nuotoliniu būdu",
-  "Dėmesys kalbėjimo, rašymo ir supratimo įgūdžiams",
+  "Nuosekli pažangos stebėsena ir grįžtamasis ryšys",
+  "Pagalba ruošiantis VBE, kontroliniams darbams ir tarpinėms patikroms",
+  "Pamokos visų amžiaus grupių mokiniams – nuo vaikų iki suaugusiųjų",
+  "Mokymasis, kuris motyvuoja – įtraukiantys metodai ir šiuolaikiškas požiūris",
 ];
 
 function AboutMe() {
