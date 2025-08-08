@@ -24,6 +24,7 @@ const features = [
   "Pagalba ruošiantis VBE, kontroliniams darbams ir tarpinėms patikroms",
   "Pamokos visų amžiaus grupių mokiniams – nuo vaikų iki suaugusiųjų",
   "Mokymasis, kuris motyvuoja – įtraukiantys metodai ir šiuolaikiškas požiūris",
+  "Aiški ir kokybiška mokomoji medžiaga"
 ];
 
 function AboutMe() {
