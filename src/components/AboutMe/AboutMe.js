@@ -20,11 +20,12 @@ const AboutMeModal = dynamic(() => import("../AboutMeModal/AboutMeModal"), {
 
 const features = [
   "Lankstus tvarkaraštis – nuotoliniu būdu",
-  "Nuosekli pažangos stebėsena ir grįžtamasis ryšys",
+  "Aiški ir kokybiška mokomoji medžiaga",
+
   "Pagalba ruošiantis VBE, kontroliniams darbams ir tarpinėms patikroms",
   "Pamokos visų amžiaus grupių mokiniams – nuo vaikų iki suaugusiųjų",
   "Mokymasis, kuris motyvuoja – įtraukiantys metodai ir šiuolaikiškas požiūris",
-  "Aiški ir kokybiška mokomoji medžiaga"
+  "Nuosekli pažangos stebėsena ir grįžtamasis ryšys",
 ];
 
 function AboutMe() {
@@ -88,7 +89,7 @@ function AboutMe() {
                 ref={(el) => (cardsRef.current[index] = el)}
                 className="flex items-start gap-3 bg-white border border-gray-200 shadow-sm rounded-xl p-4 hover:shadow-md transition"
               >
-                <CheckCircle className="text-green-600 mt-1" size={24} />
+                <CheckCircle className="w-6 h-6 shrink-0 text-green-600 mt-1" />
                 <p className="text-gray-800 text-base lg:text-lg">{feature}</p>
               </div>
             ))}
