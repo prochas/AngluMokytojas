@@ -74,7 +74,7 @@ function AboutMe() {
         <div ref={textRef} className="lg:w-[50%] text-gray-900">
           <h1 className="font-extrabold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.15] lg:mt-0 mt-4">
             Anglų kalbos pamokos, kurios įkvepia mokytis ir duoda tikrus
-            rezultatus.
+            rezultatus
           </h1>
           <h2 className="text-lg lg:text-2xl mt-4 leading-relaxed">
             Dirbu pagal veiksmingą sistemą, lavinančią anglų kalbos įgūdžius.{" "}

@@ -11,7 +11,7 @@ function Footer() {
         src={Logo}
       />
       <div className="text-[#fafafa] lg:font-semibold lg:text-sm font-normal text-[10px] text-right lg:space-y-3">
-        <p>Copyright © 2025 AngluMokytojas.lt</p>
+        <p>Copyright © 2025 anglumokytojas.lt</p>
       </div>
     </footer>
   );
