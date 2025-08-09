@@ -1,5 +1,6 @@
 import { DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Analytics />
+        <SpeedInsights />
         <ToastContainer position="bottom-right" autoClose={3000} />
       </body>
     </html>
