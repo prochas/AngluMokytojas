@@ -5,7 +5,7 @@ import PhoneIcon from "../../../public/images/phone.svg";
 import EmailIcon from "../../../public/images/email.svg";
 import Image from "next/image";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Contacts() {
@@ -119,13 +119,19 @@ function Contacts() {
             sprendimą jūsų anglų kalbos mokymosi poreikiams!
           </p>
           <div className="font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4 text-gray-900">
-            <a className="flex items-center gap-2 group text-lg lg:text-md">
+            <a
+              href="mailto:info@anglumokytojas.lt"
+              className="flex items-center gap-2 group text-lg lg:text-md"
+            >
               <Image src={EmailIcon} alt="email icon" width={20} height={50} />
               info@anglumokytojas.lt
             </a>
-            <a className="flex items-center gap-2 group text-lg lg:text-md">
+            <a
+              href="tel:+37067977969"
+              className="flex items-center gap-2 group text-lg lg:text-md"
+            >
               <Image src={PhoneIcon} alt="phone icon" width={20} height={50} />
-              +370 679 77 969
+              +370 (679) 77 969
             </a>
           </div>
         </div>

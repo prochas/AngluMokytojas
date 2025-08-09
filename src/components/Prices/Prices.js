@@ -36,7 +36,7 @@ function Prices() {
 
   return (
     <React.Fragment>
-      <section id="kainos" className="bg-[#FAFAFA] w-full my-8 pb-8 lg:mb-16 lg:pb-16 scroll-mt-25">
+      <section id="kainos" className="bg-[#FAFAFA] w-full my-8 pb-5 scroll-mt-25">
         <h2 className="text-2xl lg:text-4xl text-center text-black font-bold">
           Kainos
         </h2>

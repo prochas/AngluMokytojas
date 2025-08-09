@@ -21,11 +21,9 @@ const AboutMeModal = dynamic(() => import("../AboutMeModal/AboutMeModal"), {
 const features = [
   "Lankstus tvarkaraštis – nuotoliniu būdu",
   "Aiški ir kokybiška mokomoji medžiaga",
-
   "Pagalba ruošiantis VBE, kontroliniams darbams ir tarpinėms patikroms",
   "Pamokos visų amžiaus grupių mokiniams – nuo vaikų iki suaugusiųjų",
   "Mokymasis, kuris motyvuoja – įtraukiantys metodai ir šiuolaikiškas požiūris",
-  "Nuosekli pažangos stebėsena ir grįžtamasis ryšys",
 ];
 
 function AboutMe() {
@@ -73,7 +71,7 @@ function AboutMe() {
         ref={sectionRef}
         className="flex justify-between py-14 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse scroll-mt-20 gap-0 lg:gap-6"
       >
-        <div ref={textRef} className="lg:w-[50%] text-gray-900">
+        <div ref={textRef} className="lg:w-[55%] text-gray-900">
           <h1 className="font-extrabold text-3xl lg:text-5xl leading-[1.2] lg:leading-[1.15] lg:mt-0 mt-4">
             Anglų kalbos pamokos, kurios įkvepia mokytis ir duoda tikrus
             rezultatus
@@ -113,7 +111,7 @@ function AboutMe() {
             </button>
           </div>
         </div>
-        <div ref={imageRef} className="lg:w-[50%] w-full">
+        <div ref={imageRef} className="lg:w-[45%] w-full">
           <Image className="h-full w-full" src={Hero} alt="hero" />
         </div>
       </section>

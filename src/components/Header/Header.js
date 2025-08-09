@@ -1,18 +1,31 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import { Mail, User, Phone } from "lucide-react";
 import Link from "next/link";
+
+const AboutMeModal = dynamic(() => import("../AboutMeModal/AboutMeModal"), {
+  ssr: false,
+});
+
+const RegistrationModal = dynamic(
+  () => import("../RegisterModal/RegisterModal"),
+  {
+    ssr: false,
+  }
+);
 
 import Logo from "../../../public/images/logo.svg";
 import ScrollShadowWrapper from "../ScrollShadowWrapper/ScrollShadowWrapper";
-import RegistrationModal from "../RegisterModal/RegisterModal";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAboutMeModalOpen, setIsAboutMeModalOpen] = useState(false);
 
   const handleLinkClick = (targetId) => {
     const element = document.querySelector(targetId);
@@ -25,7 +38,7 @@ export default function Header() {
   return (
     <React.Fragment>
       <ScrollShadowWrapper>
-        <div className="container mx-auto flex justify-between items-center py-0">
+        <div className="flex justify-between items-center py-0 w-full gap-x-4">
           <Image className="h-9 cursor-pointer" alt="Logo" src={Logo} />
 
           {/* Desktop navigation */}
@@ -52,16 +65,30 @@ export default function Header() {
             ))}
           </ul>
           {/* Desktop register button */}
-          <button
-            className="hidden relative lg:inline-block px-4 py-2 font-medium group cursor-pointer"
-            onClick={() => setIsModalOpen(true)}
-          >
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-[#fafafa] border-2 border-black group-hover:bg-black"></span>
-            <span className="relative text-black group-hover:text-[#fafafa] flex items-center gap-x-3 cursor-pointer">
-              Registracija
-            </span>
-          </button>
+          <div className="hidden lg:flex items-center gap-x-8">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="flex items-center gap-2 px-4 py-2 rounded-sm bg-black text-white shadow-sm cursor-pointer hover:scale-105 transition-all duration-300"
+            >
+              <Mail className="w-5 h-5" />
+              <span>Registracija</span>
+            </button>
+            {/* About Me Button */}
+            <button
+              onClick={() => setIsAboutMeModalOpen(true)}
+              className="flex items-center outline-none gap-2 px-4 py-2 rounded-sm border border-gray-300 text-gray-700 hover:bg-gray-100 shadow-sm cursor-pointer hover:scale-105 transition-all duration-300"
+            >
+              <User className="w-5 h-5" />
+              <span>Apie mane</span>
+            </button>
+            <a
+              href="tel:+37067977969"
+              className="flex items-center gap-2 text-gray-800 transition-colors duration-300 hover:text-black text-sm"
+            >
+              <Phone className="w-5 h-5" />
+              +370 (679) 77 969
+            </a>
+          </div>
           <div className="flex items-center gap-x-6 lg:hidden">
             <button
               onClick={() => {
@@ -122,6 +149,12 @@ export default function Header() {
         <RegistrationModal
           isOpen={isModalOpen}
           onRequestClose={() => setIsModalOpen(false)}
+        />
+      )}
+      {isAboutMeModalOpen && (
+        <AboutMeModal
+          isOpen={isAboutMeModalOpen}
+          onRequestClose={() => setIsAboutMeModalOpen(false)}
         />
       )}
     </React.Fragment>
