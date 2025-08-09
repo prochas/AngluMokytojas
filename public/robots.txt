@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.anglumokytojas.lt
+
+# Sitemaps
+Sitemap: https://www.anglumokytojas.lt/sitemap.xml
