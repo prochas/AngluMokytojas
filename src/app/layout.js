@@ -1,4 +1,5 @@
 import { DM_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
       <body className="antialiased bg-gray-50 text-gray-900">
         <Header />
         <main>{children}</main>
+        <Analytics />
         <ToastContainer position="bottom-right" autoClose={3000} />
       </body>
     </html>
