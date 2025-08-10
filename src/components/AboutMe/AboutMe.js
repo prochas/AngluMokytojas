@@ -69,7 +69,7 @@ function AboutMe() {
                 style={{ cursor: "pointer" }}
                 onClick={() => setIsAboutMeModalOpen(true)}
               >
-                Apie mane
+                Sužinoti daugiau
               </button>
             </div>
           </div>

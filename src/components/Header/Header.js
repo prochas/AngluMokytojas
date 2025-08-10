@@ -79,7 +79,7 @@ export default function Header() {
               className="flex items-center outline-none gap-2 px-4 py-2 rounded-sm border border-gray-300 text-gray-700 hover:bg-gray-100 shadow-sm cursor-pointer hover:scale-105 transition-all duration-300"
             >
               <User className="w-5 h-5" />
-              <span>Apie mane</span>
+              <span>Sužinoti daugiau</span>
             </button>
             <a
               href="tel:+37067977969"

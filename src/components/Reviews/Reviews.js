@@ -79,7 +79,7 @@ function Reviews() {
         Atsiliepimai
       </h2>
       <div className="mt-8 group relative overflow-hidden">
-        <div className="overflow-x-auto sm:overflow-hidden">
+        <div className={`overflow-x-auto sm:overflow-hidden ${styles.scrollbarHide}`}>
           <div className={`${styles.scrollTrack} ${styles.paused}`}>
             {repeated.map((review, index) => (
               <div
