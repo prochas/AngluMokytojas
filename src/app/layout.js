@@ -84,9 +84,6 @@ export default function RootLayout({ children }) {
                   },
                   description:
                     "Anglų kalbos pamokos nuotoliniu būdu: 1–4, 5–10, 11–12 kl. mokiniams ir suaugusiesiems. Pagalba ruošiantis VBE, kontroliniams ir tarpinėms patikroms.",
-                  mainEntityOfPage: {
-                    "@id": "https://anglukorepetitorius.lt/#organization",
-                  },
                   datePublished: "2025-01-01",
                   dateModified: "2025-08-10",
                 },
