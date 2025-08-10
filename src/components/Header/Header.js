@@ -136,12 +136,19 @@ export default function Header() {
               </button>
             </li>
           ))}
+          <a
+            href="tel:+37067977969"
+            className="flex items-center gap-2 text-gray-800 transition-colors duration-300 hover:text-black text-sm"
+          >
+            <Phone className="w-5 h-5" />
+            +370 (679) 77 969
+          </a>
         </ul>
       </div>
       {/* Overlay when menu is open */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-30 z-30"
+          className="fixed inset-0 bg-white/30 backdrop-blur-sm z-30"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
