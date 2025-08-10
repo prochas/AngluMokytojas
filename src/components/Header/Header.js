@@ -17,7 +17,7 @@ const RegistrationModal = dynamic(
   }
 );
 
-import Logo from "../../../public/images/logo.svg";
+import Logo from "../../../public/images/logo-v13.svg";
 import ScrollShadowWrapper from "../ScrollShadowWrapper/ScrollShadowWrapper";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
@@ -39,8 +39,11 @@ export default function Header() {
     <React.Fragment>
       <ScrollShadowWrapper>
         <div className="flex justify-between items-center py-0 w-full gap-x-4">
-          <Image className="h-9 cursor-pointer" alt="Logo" src={Logo} />
-
+          <Image
+            className="cursor-pointer max-w-[120px] sm:max-w-[150px] h-auto"
+            alt="Logo"
+            src={Logo}
+          />
           {/* Desktop navigation */}
           <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
             {[
