@@ -94,14 +94,6 @@ export default function RootLayout({ children }) {
                   url: "https://anglukorepetitorius.lt/",
                   email: "info@anglukorepetitorius.lt",
                   telephone: "+37067977969",
-                  logo: {
-                    "@type": "ImageObject",
-                    url: "https://anglukorepetitorius.lt/logo.png",
-                  },
-                  image: {
-                    "@type": "ImageObject",
-                    url: "https://anglukorepetitorius.lt/og-image.jpg",
-                  },
                   contactPoint: [
                     {
                       "@type": "ContactPoint",

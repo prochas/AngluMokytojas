@@ -58,10 +58,11 @@ export default function RegistrationModal({ isOpen, onRequestClose }) {
         className="bg-white w-full sm:w-[90%] max-w-2xl max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-lg sm:rounded-lg shadow-lg outline-none relative"
       >
         <h2 className="text-xl font-semibold mb-4 text-[#111827]">
-          Greitai susisieksime ir aptarsime geriausias mokymosi galimybes!
+          Greitai su jumis susisieksime ir aptarsime geriausias mokymosi
+          galimybes!
         </h2>
         <p className="text-gray-600 mb-6">
-          Užpildykite formą žemiau, ir su jumis susisieksime per 24 valandas.
+          Užpildykite formą žemiau – atsakysime per 24 valandas.
         </p>
         <button
           onClick={onRequestClose}

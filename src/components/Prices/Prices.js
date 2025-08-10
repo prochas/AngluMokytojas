@@ -12,21 +12,21 @@ function Prices() {
 
   const data = [
     {
-      title: "1 pamoka per savaitę",
+      title: "4 pamokos",
       description: "Mėnesio planas",
       price: "100 €",
       img: OpenBook,
       subDescription: "Vienos 60 min. pamokos kaina tik 25 €",
     },
     {
-      title: "2 pamokos per savaitę",
+      title: "8 pamokos",
       description: "Mėnesio planas",
       price: "190 €",
       img: Books,
       subDescription: "Vienos 60 min. pamokos kaina tik 23.75 €",
     },
     {
-      title: "3 pamokos per savaitę",
+      title: "12 pamokų",
       description: "Mėnesio planas",
       price: "275 €",
       img: BookStack,

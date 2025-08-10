@@ -114,8 +114,8 @@ function Contacts() {
           </div>
           <p className="text-lg lg:text-md mt-4 leading-relaxed text-gray-900">
             Jei turite klausimų, pageidavimų ar norite sužinoti daugiau apie
-            mano teikiamas paslaugas, nedvejodami susisiekite su manimi. Aš
-            mielai atsakysiu į jūsų klausimus ir padėsiu rasti geriausią
+            mano teikiamas paslaugas, nedvejodami parašykite ar paskambinkite.
+            Mielai atsakysiu į jūsų klausimus ir padėsiu rasti geriausią
             sprendimą jūsų anglų kalbos mokymosi poreikiams!
           </p>
           <div className="font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4 text-gray-900">

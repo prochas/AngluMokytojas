@@ -44,7 +44,7 @@ export default function Header() {
           {/* Desktop navigation */}
           <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
             {[
-              ["#apie-mane", "Apie mane"],
+              ["#pradzia", "Pradžia"],
               ["#paslaugos", "Paslaugos"],
               ["#kainos", "Kainos"],
               ["#atsiliepimai", "Atsiliepimai"],
@@ -79,7 +79,7 @@ export default function Header() {
               className="flex items-center outline-none gap-2 px-4 py-2 rounded-sm border border-gray-300 text-gray-700 hover:bg-gray-100 shadow-sm cursor-pointer hover:scale-105 transition-all duration-300"
             >
               <User className="w-5 h-5" />
-              <span>Sužinoti daugiau</span>
+              <span>Apie mane</span>
             </button>
             <a
               href="tel:+37067977969"
@@ -121,7 +121,7 @@ export default function Header() {
       >
         <ul className="flex flex-col gap-y-6 mt-18 font-semibold text-lg">
           {[
-            ["#apie-mane", "Apie mane"],
+            ["#pradzia", "Pradžia"],
             ["#paslaugos", "Paslaugos"],
             ["#kainos", "Kainos"],
             ["#atsiliepimai", "Atsiliepimai"],

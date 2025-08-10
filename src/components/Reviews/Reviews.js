@@ -25,7 +25,7 @@ function Reviews() {
     {
       name: "Rita G.",
       review:
-        "Kadangi Justinas puikus sportininkas, todėl ir visose srityse, net ir anglų kalbos lavinime yra atsakingas, konkretus, motyvuotas, motyvuojantis, oreantuotas 5 tikslą, dinamiškas ir žinoma pedagogiškas. Labai noriu su juo lavinti ir toliau anglų kalbos žinias ir rekomenduoju!",
+        "Kadangi Justinas puikus sportininkas, todėl ir visose srityse, net ir anglų kalbos lavinime yra atsakingas, konkretus, motyvuotas, motyvuojantis, oreantuotas į tikslą, dinamiškas ir žinoma pedagogiškas. Labai noriu su juo lavinti ir toliau anglų kalbos žinias ir rekomenduoju!",
       date: "2024-10-15",
       image: Quote,
       person: PersonPlaceholder,

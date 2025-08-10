@@ -32,7 +32,7 @@ function AboutMe() {
   return (
     <React.Fragment>
       <section
-        id="apie-mane"
+        id="pradzia"
         className="flex justify-between py-14 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse scroll-mt-20 gap-0 lg:gap-6"
       >
           <div className="lg:w-[55%] text-gray-900 w3-animate-left">
@@ -69,7 +69,7 @@ function AboutMe() {
                 style={{ cursor: "pointer" }}
                 onClick={() => setIsAboutMeModalOpen(true)}
               >
-                Sužinoti daugiau
+                Apie mane
               </button>
             </div>
           </div>
