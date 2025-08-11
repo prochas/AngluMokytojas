@@ -53,6 +53,13 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="16e36642-f098-44e4-afeb-39d79c0b06ea"
+          data-blockingmode="auto"
+          type="text/javascript"
+        />
+        <Script
           id="ld-json-anglumokytojas"
           type="application/ld+json"
           strategy="afterInteractive"
