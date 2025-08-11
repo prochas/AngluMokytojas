@@ -56,8 +56,10 @@ export default function RootLayout({ children }) {
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="16e36642-f098-44e4-afeb-39d79c0b06ea"
+          data-culture="lt"
           data-blockingmode="auto"
           type="text/javascript"
+          strategy="lazyOnload"
         />
         <Script
           id="ld-json-anglumokytojas"
