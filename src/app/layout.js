@@ -34,19 +34,19 @@ export const metadata = {
     { name: "Justinas Leganovič", url: "https://www.anglumokytojas.lt" },
   ],
   creator: "Justinas Leganovič",
-  metadataBase: new URL("https://www.anglumokytojas.lt"),
+  metadataBase: new URL(SITE_URL),
   icons: { icon: "/favicon.ico" },
   openGraph: {
     title: "Anglų kalbos korepetitorius",
     description:
       "Kokybiškos anglų kalbos pamokos vaikams ir suaugusiems. Egzaminų pasiruošimas ir kalbos tobulinimas profesionaliai.",
-    url: "https://www.anglumokytojas.lt",
+    url: "/",
     siteName: "Anglų pamokos su korepetitoriumi",
     type: "website",
     locale: "lt_LT",
     images: [
       {
-        url: OG_IMAGE,
+        url: "/images/ogImage.png",
         width: 1200,
         height: 630,
         alt: "Anglų kalbos pamokos – korepetitorius",
@@ -58,11 +58,9 @@ export const metadata = {
     title: "Anglų kalbos korepetitorius",
     description:
       "Kokybiškos anglų kalbos pamokos vaikams ir suaugusiems. Egzaminų pasiruošimas ir kalbos tobulinimas profesionaliai.",
-    images: [OG_IMAGE],
+    images: ["/images/ogImage.png"],
   },
-  alternates: {
-    canonical: "https://www.anglumokytojas.lt",
-  },
+  alternates: { canonical: "/" },
 };
 
 export const viewport = { width: "device-width", initialScale: 1 };
