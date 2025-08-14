@@ -107,7 +107,7 @@ function Contacts() {
 
         {/* RIGHT SIDE */}
         <div className="lg:w-1/2">
-          <div className="font-extrabold text-2xl lg:text-5xl mt-5 lg:mt-0 space-y-1 lg:space-y-3 text-gray-900">
+          <div className="font-extrabold text-2xl lg:text-5xl mt-14 lg:mt-0 space-y-1 lg:space-y-3 text-gray-900">
             <h2>Susisiekite su manimi!</h2>
           </div>
           <p className="text-lg lg:text-md mt-4 leading-relaxed text-gray-900">
