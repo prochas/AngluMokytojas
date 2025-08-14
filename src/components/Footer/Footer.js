@@ -4,7 +4,7 @@ import Logo from "../../../public/images/logo-v14.svg";
 
 function Footer() {
   return (
-    <footer className="bg-black px-5 lg:px-28 py-6 flex items-center justify-between mt-8 lg:mt-16">
+    <footer className="bg-[#451af5] px-5 lg:px-28 py-6 flex items-center justify-between mt-8 lg:mt-16">
       <a href="#pradzia">
         <Image
           className="cursor-pointer max-w-[120px] sm:max-w-[150px] h-auto"

@@ -30,13 +30,12 @@
 .reviewCard {
     flex-shrink: 0;
     scroll-snap-align: start;
-    background-color: #f3f4f6;
     border-radius: 0.5rem;
+    background-color: white;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
     margin-right: 1rem;
-    width: 83vw; // default width for mobile (shows ~1.5 cards)
+    width: 83vw;
 
     @media (min-width: 640px) {
         width: 320px;

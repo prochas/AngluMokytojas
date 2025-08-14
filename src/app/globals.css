@@ -8,7 +8,7 @@ html {
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-bricolage-grotesque: 'Bricolage Grotesque', sans-serif;
 }
 
 @theme inline {
@@ -27,7 +27,7 @@ html {
 
 body {
   color: var(--foreground);
-  font-family: var(--font-dm-sans);
+  font-family: var(--font-bricolage-grotesque);
 }
 
 /*Modal fix*/

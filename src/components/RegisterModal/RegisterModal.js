@@ -75,7 +75,7 @@ export default function RegistrationModal({ isOpen, onRequestClose }) {
             name="name"
             value={form.name}
             onChange={handleChange}
-            className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+            className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
             placeholder="Vardas"
             type="text"
             required
@@ -84,7 +84,7 @@ export default function RegistrationModal({ isOpen, onRequestClose }) {
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+            className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
             placeholder="El. paštas"
             type="email"
             required
@@ -93,7 +93,7 @@ export default function RegistrationModal({ isOpen, onRequestClose }) {
             name="phone"
             value={form.phone}
             onChange={handleChange}
-            className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+            className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
             placeholder="Tel. numeris"
             type="tel"
           />
@@ -101,7 +101,7 @@ export default function RegistrationModal({ isOpen, onRequestClose }) {
             name="message"
             value={form.message}
             onChange={handleChange}
-            className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+            className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
             placeholder="Žinutė"
             rows="6"
             style={{ resize: "none" }}
@@ -110,7 +110,8 @@ export default function RegistrationModal({ isOpen, onRequestClose }) {
           <button
             type="submit"
             disabled={loading}
-            className="bg-black w-full transition-all duration-300 text-[#fafafa] px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
+            className="bg-[#451af5] w-full transition-all duration-300 text-[#fafafa] cursor-pointer flex items-center justify-center gap-x-2 font-semibold hover:scale-105 hover:bg-[#2700d7]"
+            style={{ padding: "12px 17px", borderRadius: "10px" }}
           >
             {loading ? "Siunčiama..." : "Siųsti žinutę"}
           </button>

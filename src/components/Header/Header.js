@@ -73,7 +73,8 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-x-8">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-2 px-4 py-2 rounded-sm bg-black text-white shadow-sm cursor-pointer hover:scale-105 transition-all duration-300"
+              className="bg-[#451af5] w-full lg:w-[160px] transition-all duration-300 text-[#fafafa] outline-none cursor-pointer flex items-center justify-center gap-x-2 font-medium hover:scale-105 hover:bg-[#2700d7]"
+              style={{ padding: "8px 20px", borderRadius: "8px" }}
             >
               <Mail className="w-5 h-5" />
               <span>Registracija</span>
@@ -81,7 +82,8 @@ export default function Header() {
             {/* About Me Button */}
             <button
               onClick={() => setIsAboutMeModalOpen(true)}
-              className="flex items-center outline-none gap-2 px-4 py-2 rounded-sm border border-gray-300 text-gray-700 hover:bg-gray-100 shadow-sm cursor-pointer hover:scale-105 transition-all duration-300"
+              className="flex gap-x-2 items-center outline-none w-full lg:w-[150px] cursor-pointer bg-[#451af514] transition-all duration-300 rounded font-medium hover:scale-105 text-[#451af5] hover:bg-[#451af526]"
+              style={{ padding: "8px 20px", borderRadius: "8px" }}
             >
               <User className="w-5 h-5" />
               <span>Apie mane</span>
@@ -100,7 +102,7 @@ export default function Header() {
                 setIsModalOpen(true);
                 setIsMobileMenuOpen(false);
               }}
-              className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition"
+              className="bg-[#451af5] text-[#fafafa] py-2 px-4 outline-none rounded hover:bg-[#2700d7] transition"
             >
               Registracija
             </button>
@@ -120,7 +122,7 @@ export default function Header() {
       </ScrollShadowWrapper>
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 w-4/5 max-w-sm h-full bg-[#fafafa] z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 w-4/5 max-w-sm h-full bg-white z-40 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         } shadow-lg p-6`}
       >

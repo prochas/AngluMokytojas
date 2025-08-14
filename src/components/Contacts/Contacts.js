@@ -48,10 +48,7 @@ function Contacts() {
   };
 
   return (
-    <section
-      id="kontaktai"
-      className="bg-[#FAFAFA] w-full mb-8 pb-8 lg:mb-16 lg:pb-16 scroll-mt-20 px-5 lg:px-12"
-    >
+    <section id="kontaktai" className="bg-white flex flex-col pt-12 pb-14 px-5 lg:px-0">
       <h2 className="text-2xl lg:text-4xl text-center text-black font-bold">
         Kontaktai
       </h2>
@@ -65,7 +62,7 @@ function Contacts() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+              className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
               placeholder="Vardas"
               type="text"
               required
@@ -74,7 +71,7 @@ function Contacts() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+              className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
               placeholder="El. paštas"
               type="email"
               required
@@ -83,7 +80,7 @@ function Contacts() {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+              className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
               placeholder="Tel. numeris"
               type="tel"
             />
@@ -91,7 +88,7 @@ function Contacts() {
               name="message"
               value={form.message}
               onChange={handleChange}
-              className="border-2 px-5 py-3 border-black rounded placeholder:text-gray-700 text-sm w-full text-gray-900"
+              className="border-1 px-5 py-3 border-[#0000000d] rounded placeholder:text-gray-900 text-sm w-full text-gray-900 bg-[#fbfaff] outline-none"
               placeholder="Žinutė"
               rows="6"
               style={{ resize: "none" }}
@@ -100,7 +97,8 @@ function Contacts() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-black w-full transition-all duration-300 text-[#fafafa] px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
+              className="bg-[#451af5] w-full transition-all duration-300 text-[#fafafa] cursor-pointer flex items-center justify-center gap-x-2 font-semibold hover:scale-105 hover:bg-[#2700d7]"
+              style={{ padding: "12px 17px", borderRadius: "10px" }}
             >
               {loading ? "Siunčiama..." : "Siųsti žinutę"}
             </button>

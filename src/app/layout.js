@@ -1,4 +1,4 @@
-import { DM_Sans } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -9,12 +9,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/Header/Header";
 import "./globals.css";
 
-const SITE_URL = "https://www.anglumokytojas.lt";
+export const SITE_URL = "https://anglumokytojas.lt";
 const OG_IMAGE = `${SITE_URL}/images/ogImage.png`;
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
+const bricolaGeGrotesque = Bricolage_Grotesque({
+  subsets: ["latin", "latin-ext"], 
+  variable: "--font-bricolage-grotesque",
+  display: "swap",
+  preload: false,
 });
 
 export const metadata = {
@@ -30,9 +32,7 @@ export const metadata = {
     "individualus anglų mokymas",
     "anglų kalbos korepetitorius",
   ],
-  authors: [
-    { name: "Justinas Leganovič", url: "https://www.anglumokytojas.lt" },
-  ],
+  authors: [{ name: "Justinas Leganovič", url: "https://anglumokytojas.lt" }],
   creator: "Justinas Leganovič",
   metadataBase: new URL(SITE_URL),
   icons: { icon: "/favicon.ico" },
@@ -67,8 +67,8 @@ export const viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="lt" className={dmSans.variable}>
-      <body className="antialiased bg-gray-50 text-gray-900">
+    <html lang="lt" className={bricolaGeGrotesque.variable}>
+      <body className="antialiased text-gray-900">
         <Header />
         <main>{children}</main>
         <Script
@@ -90,26 +90,20 @@ export default function RootLayout({ children }) {
               "@graph": [
                 {
                   "@type": "WebSite",
-                  "@id": "https://www.anglumokytojas.lt/#website",
-                  url: "https://www.anglumokytojas.lt/",
+                  "@id": `${SITE_URL}/#website`,
+                  url: `${SITE_URL}/`,
                   name: "Anglų pamokos su korepetitoriumi",
                   inLanguage: "lt-LT",
-                  publisher: {
-                    "@id": "https://www.anglumokytojas.lt/#organization",
-                  },
+                  publisher: { "@id": `${SITE_URL}/#organization` },
                 },
                 {
                   "@type": "WebPage",
-                  "@id": "https://www.anglumokytojas.lt/#webpage",
-                  url: "https://www.anglumokytojas.lt/",
+                  "@id": `${SITE_URL}/#webpage`,
+                  url: `${SITE_URL}/`,
                   name: "Anglų kalbos korepetitorius – pamokos vaikams ir suaugusiems",
-                  isPartOf: {
-                    "@id": "https://www.anglumokytojas.lt/#website",
-                  },
+                  isPartOf: { "@id": `${SITE_URL}/#website` },
                   inLanguage: "lt-LT",
-                  about: {
-                    "@id": "https://www.anglumokytojas.lt/#organization",
-                  },
+                  about: { "@id": `${SITE_URL}/#organization` },
                   description:
                     "Anglų kalbos pamokos nuotoliniu būdu: 1–4, 5–10, 11–12 kl. mokiniams ir suaugusiesiems. Pagalba ruošiantis VBE, kontroliniams ir tarpinėms patikroms.",
                   datePublished: "2025-01-01",
@@ -123,9 +117,9 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "Organization",
-                  "@id": "https://www.anglumokytojas.lt/#organization",
+                  "@id": `${SITE_URL}/#organization`,
                   name: "Anglų mokytojas",
-                  url: "https://www.anglumokytojas.lt/",
+                  url: `${SITE_URL}/`,
                   email: "info@anglumokytojas.lt",
                   telephone: "+37067977969",
                   contactPoint: [
@@ -142,20 +136,17 @@ export default function RootLayout({ children }) {
                     "@type": "AdministrativeArea",
                     name: "Lietuva",
                   },
-                  hasOfferCatalog: {
-                    "@id": "https://www.anglumokytojas.lt/#catalog",
-                  },
+                  hasOfferCatalog: { "@id": `${SITE_URL}/#catalog` },
                 },
                 {
                   "@type": "OfferCatalog",
-                  "@id": "https://www.anglumokytojas.lt/#catalog",
+                  "@id": `${SITE_URL}/#catalog`,
                   name: "Anglų kalbos pamokos",
-                  url: "https://www.anglumokytojas.lt/#paslaugos",
+                  url: `${SITE_URL}/#paslaugos`,
                   itemListElement: [
                     {
                       "@type": "Offer",
-                      "@id":
-                        "https://www.anglumokytojas.lt/#offer-children-1-4",
+                      "@id": `${SITE_URL}/#offer-children-1-4`,
                       name: "1–4 klasių mokiniams – individualios pamokos",
                       priceCurrency: "EUR",
                       price: 25.0,
@@ -167,24 +158,20 @@ export default function RootLayout({ children }) {
                       },
                       itemOffered: {
                         "@type": "Service",
-                        "@id":
-                          "https://www.anglumokytojas.lt/#service-children-1-4",
+                        "@id": `${SITE_URL}/#service-children-1-4`,
                         serviceType: "Anglų kalbos pamokos 1–4 kl.",
-                        provider: {
-                          "@id": "https://www.anglumokytojas.lt/#organization",
-                        },
+                        provider: { "@id": `${SITE_URL}/#organization` },
                         areaServed: "Lietuva",
                         availableChannel: {
                           "@type": "ServiceChannel",
-                          serviceUrl: "https://www.anglumokytojas.lt/",
+                          serviceUrl: `${SITE_URL}/`,
                           name: "Nuotoliniu būdu",
                         },
                       },
                     },
                     {
                       "@type": "Offer",
-                      "@id":
-                        "https://www.anglumokytojas.lt/#offer-children-5-10",
+                      "@id": `${SITE_URL}/#offer-children-5-10`,
                       name: "5–10 klasių mokiniams – individualios pamokos",
                       priceCurrency: "EUR",
                       price: 25.0,
@@ -196,23 +183,20 @@ export default function RootLayout({ children }) {
                       },
                       itemOffered: {
                         "@type": "Service",
-                        "@id":
-                          "https://www.anglumokytojas.lt/#service-children-5-10",
+                        "@id": `${SITE_URL}/#service-children-5-10`,
                         serviceType: "Anglų kalbos pamokos 5–10 kl.",
-                        provider: {
-                          "@id": "https://www.anglumokytojas.lt/#organization",
-                        },
+                        provider: { "@id": `${SITE_URL}/#organization` },
                         areaServed: "Lietuva",
                         availableChannel: {
                           "@type": "ServiceChannel",
-                          serviceUrl: "https://www.anglumokytojas.lt/",
+                          serviceUrl: `${SITE_URL}/`,
                           name: "Nuotoliniu būdu",
                         },
                       },
                     },
                     {
                       "@type": "Offer",
-                      "@id": "https://www.anglumokytojas.lt/#offer-11-12",
+                      "@id": `${SITE_URL}/#offer-11-12`,
                       name: "11–12 klasių mokiniams – VBE pasiruošimas",
                       priceCurrency: "EUR",
                       price: 25.0,
@@ -224,22 +208,20 @@ export default function RootLayout({ children }) {
                       },
                       itemOffered: {
                         "@type": "Service",
-                        "@id": "https://www.anglumokytojas.lt/#service-11-12",
+                        "@id": `${SITE_URL}/#service-11-12`,
                         serviceType: "VBE anglų kalbos egzaminui",
-                        provider: {
-                          "@id": "https://www.anglumokytojas.lt/#organization",
-                        },
+                        provider: { "@id": `${SITE_URL}/#organization` },
                         areaServed: "Lietuva",
                         availableChannel: {
                           "@type": "ServiceChannel",
-                          serviceUrl: "https://www.anglumokytojas.lt/",
+                          serviceUrl: `${SITE_URL}/`,
                           name: "Nuotoliniu būdu",
                         },
                       },
                     },
                     {
                       "@type": "Offer",
-                      "@id": "https://www.anglumokytojas.lt/#offer-adults",
+                      "@id": `${SITE_URL}/#offer-adults`,
                       name: "Suaugusiesiems – individualios pamokos",
                       priceCurrency: "EUR",
                       price: 25.0,
@@ -251,15 +233,13 @@ export default function RootLayout({ children }) {
                       },
                       itemOffered: {
                         "@type": "Service",
-                        "@id": "https://www.anglumokytojas.lt/#service-adults",
+                        "@id": `${SITE_URL}/#service-adults`,
                         serviceType: "Anglų kalbos pamokos suaugusiesiems",
-                        provider: {
-                          "@id": "https://www.anglumokytojas.lt/#organization",
-                        },
+                        provider: { "@id": `${SITE_URL}/#organization` },
                         areaServed: "Lietuva",
                         availableChannel: {
                           "@type": "ServiceChannel",
-                          serviceUrl: "https://www.anglumokytojas.lt/",
+                          serviceUrl: `${SITE_URL}/`,
                           name: "Nuotoliniu būdu",
                         },
                       },
@@ -268,9 +248,9 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "AggregateOffer",
-                  "@id": "https://www.anglumokytojas.lt/#bundle-offers",
+                  "@id": `${SITE_URL}/#bundle-offers`,
                   name: "Mėnesio planai",
-                  url: "https://www.anglumokytojas.lt/#kainos",
+                  url: `${SITE_URL}/#kainos`,
                   priceCurrency: "EUR",
                   lowPrice: 22.9,
                   highPrice: 25.0,

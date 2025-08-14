@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.anglumokytojas.lt
+Host: https://anglumokytojas.lt
 
 # Sitemaps
-Sitemap: https://www.anglumokytojas.lt/sitemap.xml
+Sitemap: https://anglumokytojas.lt/sitemap.xml

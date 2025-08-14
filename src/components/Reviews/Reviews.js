@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Quote from "../../../public/images/quotes.png";
+import Quote from "../../../public/images/quotes.svg";
 import Image from "next/image";
 import { Star } from "lucide-react";
-import ServicesBG from "../../../public/images/services-background-v2.png";
 import PersonPlaceholder from "../../../public/images/person-placeholder-v2.png";
 import FirstImage from "../../../public/images/austeja-v.jpg";
 import SecondImage from "../../../public/images/sonata-n.jpg";
@@ -69,32 +68,26 @@ function Reviews() {
   return (
     <section
       id="atsiliepimai"
-      className="bg-[#0f0f0f] w-full my-8 py-8 lg:my-16 lg:py-16 scroll-mt-10"
-      style={{
-        backgroundImage: `url(${ServicesBG.src})`,
-        backgroundSize: "contain",
-      }}
+      className="border-t border-b border-[#0000000d] bg-[#00000005] flex flex-col pt-12 pb-14 scroll-mt-12"
     >
-      <h2 className="text-2xl lg:text-4xl text-center text-[#fafafa] font-bold">
+      <h2 className="text-2xl lg:text-4xl text-center text-black font-bold">
         Atsiliepimai
       </h2>
       <div className="mt-8 group relative overflow-hidden">
-        <div className={`overflow-x-auto sm:overflow-hidden ${styles.scrollbarHide}`}>
+        <div
+          className={`overflow-x-auto sm:overflow-hidden ${styles.scrollbarHide}`}
+        >
           <div className={`${styles.scrollTrack} ${styles.paused}`}>
             {repeated.map((review, index) => (
-              <div
-                key={index}
-                className={styles.reviewCard}
-                style={{ backgroundColor: "#F3F4F6" }}
-              >
+              <div key={index} className={styles.reviewCard}>
                 <div className="flex items-start justify-between mb-1">
                   <div className="flex flex-col items-left mb-1">
                     <div className="flex items-center mb-4">
                       <Image
                         src={review.image}
                         alt="Quote"
-                        width={40}
-                        height={40}
+                        width={30}
+                        height={30}
                         className="mr-5"
                       />
                       <h3 className="text-xl font-bold text-black">
@@ -115,10 +108,13 @@ function Reviews() {
                     className="rounded-full mr-3"
                   />
                 </div>
-                <p className="text-sm lg:text-base text-gray-800 mb-4">
+                <p
+                  className="text-sm lg:text-base text-black mb-4"
+                  style={{ fontWeight: "400" }}
+                >
                   {review.review}
                 </p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-[#000000b3]">
                   {new Date(review.date).toLocaleDateString("lt-LT", {
                     year: "numeric",
                     month: "long",
@@ -135,7 +131,8 @@ function Reviews() {
           href="https://paslaugos.lt/justinas-mk557"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#fafafa] w-full lg:w-[250px] transition-all duration-300 text-black px-3 py-3 rounded flex items-center justify-center gap-x-3 font-medium cursor-pointer hover:scale-105 font-bold"
+          className="outline-none w-full lg:w-[265px] cursor-pointer bg-[#451af514] transition-all duration-300 rounded font-semibold hover:scale-105 text-[#451af5] hover:bg-[#451af526] text-center"
+          style={{ padding: "14px 20px", borderRadius: "10px" }}
         >
           Peržiūrėti visus atsiliepimus!
         </a>
