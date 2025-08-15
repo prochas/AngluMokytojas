@@ -17,7 +17,7 @@ const RegistrationModal = dynamic(
   }
 );
 
-import Logo from "../../../public/images/logo-v13.svg";
+import Logo from "../../../public/images/logo-speako.svg";
 import ScrollShadowWrapper from "../ScrollShadowWrapper/ScrollShadowWrapper";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
@@ -39,12 +39,30 @@ export default function Header() {
     <React.Fragment>
       <ScrollShadowWrapper>
         <div className="flex justify-between items-center py-0 w-full gap-x-4">
-          <a href="#pradzia">
+          <a className="flex items-start gap-x-2" href="#pradzia">
             <Image
-              className="cursor-pointer max-w-[120px] sm:max-w-[150px] h-auto"
+              className="flex items-start gap-x-2 transform transition-transform duration-300 hover:rotate-[16deg]"
               alt="Logo"
               src={Logo}
             />
+            <div className="flex flex-col">
+              <span
+                className="text-black"
+                style={{
+                  lineHeight: "10px",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                }}
+              >
+                Anglų
+              </span>
+              <span
+                className="text-black"
+                style={{ fontSize: "16px", fontWeight: "500" }}
+              >
+                Mokytojas
+              </span>
+            </div>
           </a>
           {/* Desktop navigation */}
           <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
