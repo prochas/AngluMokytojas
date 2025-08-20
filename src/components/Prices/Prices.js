@@ -22,7 +22,7 @@ function Prices() {
       description: "Mėnesio planas",
       price: "100 €",
       img: FirstLessonsImg,
-      subDescription: "Vienos 60 min. pamokos kaina tik 25 €",
+      subDescription: "Vienos 60 min. pamokos kaina 25 €",
     },
     {
       name: "Standartinis",

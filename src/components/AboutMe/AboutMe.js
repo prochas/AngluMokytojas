@@ -84,7 +84,7 @@ function AboutMe() {
             </button>
           </div>
         </div>
-        <div className="lg:w-[35%] w-full w3-animate-right">
+        <div className="w-full lg:w-[35%] max-w-[280px] lg:max-w-none w3-animate-right">
           <Image
             className="h-auto w-full"
             src={Herov2}
