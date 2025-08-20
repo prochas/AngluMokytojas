@@ -168,6 +168,14 @@ export default function Header() {
             <Phone className="w-5 h-5" />
             +370 (679) 77 969
           </a>
+          <button
+            onClick={() => setIsAboutMeModalOpen(true)}
+            className="flex gap-x-2 items-center outline-none cursor-pointer bg-[#451af514] transition-all duration-300 rounded font-medium hover:scale-105 text-[#451af5] hover:bg-[#451af526]"
+            style={{ padding: "8px 20px", borderRadius: "8px", width: "55%" }}
+          >
+            <User className="w-5 h-5" />
+            <span>Apie mane</span>
+          </button>
         </ul>
       </div>
       {/* Overlay when menu is open */}
