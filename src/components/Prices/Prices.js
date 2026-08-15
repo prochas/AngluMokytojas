@@ -22,7 +22,7 @@ function Prices() {
       description: "Mėnesio planas",
       price: "100 €",
       img: FirstLessonsImg,
-      subDescription: "Vienos 60 min. pamokos kaina 25 €",
+      subDescription: "Vienos 60 min. pamokos kaina 30 €",
     },
     {
       name: "Standartinis",
@@ -30,7 +30,7 @@ function Prices() {
       description: "Mėnesio planas",
       price: "190 €",
       img: SecondLessonsImg,
-      subDescription: "Vienos 60 min. pamokos kaina tik 23.75 €",
+      subDescription: "Vienos 60 min. pamokos kaina tik 27.5 €",
     },
     {
       name: "Premium",
@@ -38,7 +38,7 @@ function Prices() {
       description: "Mėnesio planas",
       price: "275 €",
       img: ThirdLessonsImg,
-      subDescription: "Vienos 60 min. pamokos kaina tik 22.90 €",
+      subDescription: "Vienos 60 min. pamokos kaina tik 25 €",
     },
   ];
 
